@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>TheWaya</title>
+</head>
+
+<body class="bg-[#1C1C1E]">
+
+
+    <!-- nabvar starts here -->
+    <div class="bg-[#1C1C1E] sticky top-0 ">
+        <div class="max-w-screen-xl mx-auto  flex justify-between items-center py-4  ">
+
+            <div class="flex w-16 h-16 md:w-20 md:h-20">
+                <img src="./Images/logo.png" alt="Logo">
+            </div>
+
+            <div class="hidden md:flex gap-16 items-center">
+                <ul class="flex gap-16 text-white">
+                    <li><a href="#" class="hover:text-gray-400 transition">About Us</a></li>
+                    <li><a href="#" class="hover:text-gray-400 transition">Products</a></li>
+                    <li><a href="#" class="hover:text-gray-400 transition">Blogs</a></li>
+                    <li><a href="#" class="hover:text-gray-400 transition">Community</a></li>
+                </ul>
+                <button
+                    class="border-white border-[2px] px-8 py-2 rounded-3xl text-white hover:bg-white hover:text-black transition cursor-pointer">
+                    Contact Us</button>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-white text-3xl focus:outline-none">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden w-full absolute  left-0 right-0 bg-[#2C2C2E] shadow-lg z-10">
+            <ul class="flex flex-col text-white text-center py-4 space-y-3">
+                <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">About Us</a></li>
+                <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">Products</a></li>
+                <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">Blogs</a></li>
+                <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">Community</a></li>
+                <li>
+                    <div class="flex">
+                        <button
+                            class="mt-2 w-3/4 mx-auto border-white border-[2px] px-8 py-2 rounded-3xl text-white hover:bg-white hover:text-black transition cursor-pointer">
+                            Contact Us</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- nabvar ends here -->
+
+    <!-- banner starts here -->
+
+    <div
+        class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between md:px-20  gap-10 text-center md:text-left text-white py-10">
+
+        <div class=" flex flex-col gap-2 justify-center ">
+            <p class="text-[#EDA146] text-lg md:text-[20px]">WE TELL YOU</p>
+            <h1 class="font-bold text-4xl  sm:text-5xl text-white leading-tight">
+                When to <span class="text-[#c975e0]">Buy</span> <br>
+                When to <span class="text-[#6fbffd]">Exit</span>
+            </h1>
+            <p class="text-[#AAAAAA] text-lg md:text-2xl">Over fundamentally strong companies</p>
+            <div class="mt-8">
+                <button
+                    class="border-white border-[2px] px-8 py-2 rounded-3xl text-white hover:bg-white hover:text-black duration-300 cursor-pointer">
+                    Register For Free</button>
+            </div>
+        </div>
+        <div class=" flex justify-center items-center">
+            <img src="./Images/banner.png" alt="Banner" class="w-80 md:w-96">
+        </div>
+    </div>
+    <div class=" max-w-screen-xl md:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center mx-[5%] gap-4 py-16">
+
+        <div class="rounded-xl p-[2px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
+            <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                <div><img src="./Images/tabler_users.png" alt="user"></div>
+                <p class="text-white font-medium mt-2">10 Lakh + users</p>
+            </div>
+        </div>
+
+        <div class="rounded-xl p-[2px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
+            <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                <div><img src="./Images/mdi_register-outline.png" alt="register"></div>
+                <p class="text-white font-medium mt-2">SEBI Registered RA <br># PMS #</p>
+            </div>
+        </div>
+
+        <div class="rounded-xl p-[2px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
+            <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                <div><img src="./Images/ant-design_stock-outlined.png" alt="graph"></div>
+                <p class="text-white font-medium mt-2">AUA: 400 Crores</p>
+            </div>
+        </div>
+
+        <div class="rounded-xl p-[2px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
+            <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                <div><img src="./Images/iwwa_year.png" alt="calender"></div>
+                <p class="text-white font-medium mt-2">Experience: 25 Years</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- banner starts here -->
+
+
+    <!-- products starts here -->
+
+    <div class="bg-white">
+        <div class="max-w-screen-xl md:mx-auto   py-10 flex flex-col gap-12 -z-10 bg-no-repeat bg-center bg-cover"
+            style="background-image: url('./Images/Group 41.svg');">
+            <div class="flex flex-col gap-3">
+                <h2 class="font-semibold text-center text-4xl">Waya Products</h2>
+                <p class="text-[#898989] text-center mx-[5%] md:mx-[30%]">Comprehensive financial services designed to
+                    maximize
+                    your
+                    investment potential across all market
+                    segments</p>
+            </div>
+            <div
+                class="max-w-screen-xl   grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mx-4 md:mx-52   text-[#1C1C1E] ">
+                <div class=" bg-[#6DBDFF];">
+
+                    <div
+                        class="rounded-xl p-5 md:p-10   bg-white hover:shadow-2xl hover:shadow-[#dccff3] mx-6 my-4 flex flex-col gap-4 ">
+
+                        <div class="flex justify-center text-center"><img src="./Images/Group 25 (2).png"
+                                alt="register">
+                        </div>
+                        <p class="font-bold text-xl text-center mt-2">Waya Equity</p>
+                        <p class=" text-justify">Expert equity recommendations and stock analysis for
+                            maximizing your
+                            investment returns</p>
+                        <ul class="text-left list-disc mx-5 ">
+                            <li class="list-disc">Short Term Recommendations</li>
+                            <li>Multibagger Recommendations</li>
+                            <li>Monthly and Weekly Byte</li>
+                        </ul>
+                        <div class="mt-2 text-center">
+                            <button class="  px-8 py-2 rounded-3xl underline cursor-pointer">
+                                Know More</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="rounded-xl p-5 md:p-10 hover:shadow-2xl bg-white hover:shadow-[#dccff3] mx-4 my-4 flex flex-col gap-4">
+                    <div class="flex justify-center text-center"><img src="./Images/Group 24 (1).png" alt="register">
+                    </div>
+                    <p class="font-bold text-xl text-center mt-2">Waya FnO</p>
+                    <p class="text-justify">Advanced Futures and Options strategies for sophisticated trading
+                        opportunities</p>
+                    <ul class="text-left list-disc mx-5">
+                        <li class="list-disc">Index and Stock Option calls</li>
+                        <li>Hero-Zero Calls</li>
+                        <li>Interdaya and BTST calls</li>
+                    </ul>
+                    <div class="mt-2 text-center">
+                        <button class="  px-8 py-2 rounded-3xl underline cursor-pointer">
+                            Know More</button>
+                    </div>
+                </div>
+                <div
+                    class="rounded-xl p-5 md:p-10 hover:shadow-2xl bg-white hover:shadow-[#dccff3] mx-4 my-4 flex flex-col gap-4">
+                    <div class="flex justify-center text-center"><img src="./Images/Group 26 (3).png" alt="register">
+                    </div>
+                    <p class="font-bold text-xl text-center mt-2">Waya MCX</p>
+                    <p class=" text-justify">Gold , Oil , Silver and Other Commodities</p>
+                    <ul class="text-left list-disc mx-5">
+                        <li class="list-disc">Intraday and BTST Recommendations</li>
+                        <li>Options and Futures</li>
+                    </ul>
+                    <div class="mt-2 text-center">
+                        <button class="  px-8 py-2 rounded-3xl underline cursor-pointer">
+                            Know More</button>
+                    </div>
+                </div>
+                <div
+                    class="rounded-xl p-5 md:p-10 hover:shadow-2xl bg-white hover:shadow-[#dccff3]  mx-4 my-4 flex flex-col gap-4">
+                    <div class="flex justify-center text-center"><img src="./Images/Group 27.png" alt="register">
+                    </div>
+                    <p class="font-bold text-xl text-center mt-2">Waya PMS</p>
+                    <p class=" text-justify">Ranked : 3 according to PMS bazaar</p>
+                    <ul class="text-left list-disc mx-5">
+                        <li class="list-disc">Aspiration for 1000% in 7 years</li>
+                        <li>Category : Small Cap</li>
+
+                    </ul>
+                    <div class="mt-2 text-center">
+                        <button class="  px-8 py-2 rounded-3xl underline cursor-pointer">
+                            Know More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- products ends here -->
+
+    <!-- The Founder starts here -->
+
+    <div>
+        <div class=" py-10 flex flex-col gap-10">
+            <h2 class="text-3xl font-semibold text-center text-white">Word From The Founder</h2>
+            <div class="flex justify-center ">
+                <iframe src="./Images/pms_desktop.mp4" class="w-[1280px] h-[540px] md:h-[720px] rounded-lg" frameborder="0">
+                </iframe>
+            </div>
+        </div>
+        <div>
+            <div class=" flex flex-col gap-10 bg-no-repeat bg-center bg-cover "
+                style="background-image: url('./Images/Frame 3.svg');">
+                <div class="max-w-screen-xl mx-auto  rounded-t-[80px] bg-[#1C1C1E]  mt-20 pt-14">
+                    <h2 class="text-3xl font-semibold text-center text-white">Why Choose Waya Financial
+                        Technologies?</h2>
+                    <p class="text-[#AAAAAA] text-center md:mx-[35%]">Experience the different with our
+                        professional, compliant, and results-driven approach</p>
+                    <div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-center gap-4 py-16  ">
+                        <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                            <div><img src="./Images/Group 40.png" alt="user"></div>
+                            <p class="text-white font-semibold mt-2 text-[20px]">SEBI Registered</p>
+                            <p class="text-white">Fully compliant and registered research analyst ensuring
+                                regulatory adherence and professional standards</p>
+                        </div>
+                        <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                            <div><img src="./Images/Group 38.png" alt="user"></div>
+                            <p class="text-white font-semibold mt-2 text-[20px]">Expert Research</p>
+                            <p class="text-white">Deep market analysis and research-backed recommendations
+                                across
+                                equity, derivatives, and commodities</p>
+                        </div>
+                        <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                            <div><img src="./Images/Group 39.png" alt="user"></div>
+                            <p class="text-white font-semibold mt-2 text-[20px]">Proven Track Record</p>
+                            <p class="text-white">2 + years of consistent service delivery with a focus on
+                                maximizing client investment returns</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Founder ends here -->
+
+    <!-- Get in touch starts here -->
+    <div class="bg-white">
+        <div class=" max-w-screen-xl mx-auto grid grid-cols-1 text-center py-16">
+
+            <div class="rounded-xl p-[2px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A] mx-[5%] md:mx-[30%]">
+                <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[white] h-full">
+                    <h3 class="font-semibold text-3xl">Get In Touch</h3>
+                    <form class="w-full flex flex-col gap-4 ">
+                        <input type="text" placeholder="Name"
+                            class="border-b-2 border-[#1C1C1E]  p-3 w-full focus:outline-none text-[#1C1C1E]"/>
+                        <input type="email" placeholder="Mobile Number"
+                            class="border-b-2 border-[#1C1C1E]  p-3 w-full focus:outline-none  text-[#1C1C1E]"/>
+                        <input type="email" placeholder="Product Type"
+                            class="border-b-2 border-[#1C1C1E]  p-3 w-full focus:outline-none text-[#1C1C1E] "/>
+                        <textarea placeholder="Message" rows="4"
+                            class="border-b-2 border-[#1C1C1E]  p-3 w-full focus:outline-none text-[#1C1C1E]"></textarea>
+                        <button type="submit"
+                            class="bg-gradient-to-r from-[#77F0E4] via-[#C578E3] to-[#ECAF6A] text-white font-semibold rounded-lg py-3 mt-2 hover:opacity-90 transition">
+                            Send Message
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+
+            button.addEventListener('click', () => {
+                // Toggle the 'hidden' class to show/hide the menu
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
