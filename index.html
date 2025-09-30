@@ -8,149 +8,200 @@
     <title>TheWaya</title>
 </head>
 
-<body class="bg-[#1C1C1E]">
+<body>
 
+    <div class="bg-[#1C1C1E]">
+        <!-- nabvar starts here -->
 
-    <!-- nabvar starts here -->
+        <div class="bg-[#1C1C1E] sticky top-0">
+            <div class="max-w-screen-xl md:mx-auto flex justify-between items-center py-4 mx-[5%]">
 
-    <div class="bg-[#1C1C1E] sticky top-0">
-  <div class="max-w-screen-xl md:mx-auto flex justify-between items-center py-4 mx-[5%]">
+                <!-- Logo -->
+                <div class="flex w-20 h-20">
+                    <img src="./Images/logo.png" alt="Logo">
+                </div>
 
-    <!-- Logo -->
-    <div class="flex w-20 h-20">
-      <img src="./Images/logo.png" alt="Logo">
-    </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex gap-16 items-center">
+                    <ul class="flex gap-16 text-white">
+                        <li><a href="#" class="hover:text-gray-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-gray-400 transition">Products</a></li>
+                        <li><a href="#" class="hover:text-gray-400 transition">Blogs</a></li>
+                        <li><a href="#" class="hover:text-gray-400 transition">Community</a></li>
+                    </ul>
+                    <button
+                        class="border-white border-[2px] px-8 py-2 rounded-3xl text-white hover:bg-white hover:text-black transition cursor-pointer">
+                        Contact Us</button>
+                </div>
 
-    <!-- Desktop Menu -->
-    <div class="hidden md:flex gap-16 items-center">
-      <ul class="flex gap-16 text-white">
-        <li><a href="#" class="hover:text-gray-400 transition">About Us</a></li>
-        <li><a href="#" class="hover:text-gray-400 transition">Products</a></li>
-        <li><a href="#" class="hover:text-gray-400 transition">Blogs</a></li>
-        <li><a href="#" class="hover:text-gray-400 transition">Community</a></li>
-      </ul>
-      <button
-        class="border-white border-[2px] px-8 py-2 rounded-3xl text-white hover:bg-white hover:text-black transition cursor-pointer">
-        Contact Us</button>
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <div class="md:hidden flex items-center">
-      <button id="mobile-menu-button" class="text-white text-3xl focus:outline-none">
-        ☰
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu"
-    class="hidden md:hidden w-full absolute left-0 right-0 bg-[#2C2C2E] shadow-lg z-10">
-    <ul class="flex flex-col text-white text-center py-4 space-y-3">
-      <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">About Us</a></li>
-      <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">Products</a></li>
-      <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">Blogs</a></li>
-      <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">Community</a></li>
-      <li>
-        <div class="flex">
-          <button
-            class="mt-2 w-3/4 mx-auto border-white border-[2px] px-8 py-2 rounded-3xl text-white hover:bg-white hover:text-black transition cursor-pointer">
-            Contact Us</button>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-
-    <!-- nabvar ends here -->
-
-    <!-- banner starts here -->
-
-    <div
-        class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between md:px-20  gap-10 text-center md:text-left text-white py-10">
-
-        <div class=" flex flex-col gap-2 justify-center ">
-            <p class="text-[#EDA146] text-lg md:text-[20px]">WE TELL YOU</p>
-            <h1 class="font-bold text-4xl  sm:text-5xl text-white leading-tight">
-                When to <span class="text-[#c975e0]">Buy</span> <br>
-                When to <span class="text-[#6fbffd]">Exit</span>
-            </h1>
-            <p class="text-[#AAAAAA] text-lg md:text-2xl">Over fundamentally strong companies</p>
-            <div class="mt-8">
-                <button
-                    class="border-white border-[2px] px-8 py-2 rounded-3xl text-white hover:bg-white hover:text-black duration-300 cursor-pointer">
-                    Register For Free</button>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white text-3xl focus:outline-none">
+                        ☰
+                    </button>
+                </div>
             </div>
-        </div>
-        <div class=" flex justify-center items-center">
-            <img src="./Images/banner.png" alt="Banner" class="w-80 md:w-96">
-        </div>
-    </div>
-    <div
-        class=" max-w-screen-xl md:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center mx-[5%] gap-4 py-16">
 
-        <div class="rounded-xl p-[3px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
-            <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
-                <div><img src="./Images/tabler_users.png" alt="user"></div>
-                <p class="text-white font-medium mt-2">10 Lakh + users</p>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden w-full absolute left-0 right-0 bg-[#2C2C2E] shadow-lg z-10">
+                <ul class="flex flex-col text-white text-center py-4 space-y-3">
+                    <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">About Us</a></li>
+                    <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">Products</a></li>
+                    <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">Blogs</a></li>
+                    <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">Community</a></li>
+                    <li>
+                        <div class="flex">
+                            <button
+                                class="mt-2 w-3/4 mx-auto border-white border-[2px] px-8 py-2 rounded-3xl text-white hover:bg-white hover:text-black transition cursor-pointer">
+                                Contact Us</button>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
 
-        <div class="rounded-xl p-[3px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
-            <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
-                <div><img src="./Images/mdi_register-outline.png" alt="register"></div>
-                <p class="text-white font-medium mt-2">SEBI Registered RA <br># PMS #</p>
+        <!-- nabvar ends here -->
+
+        <!-- banner starts here -->
+
+        <div
+            class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between md:px-20  gap-10 text-center md:text-left text-white py-10">
+
+            <div class=" flex flex-col gap-2 justify-center ">
+                <p class="text-[#EDA146] text-lg md:text-[20px]">WE TELL YOU</p>
+                <h1 class="font-bold text-4xl  sm:text-5xl text-white leading-tight">
+                    When to <span class="text-[#c975e0]">Buy</span> <br>
+                    When to <span class="text-[#6fbffd]">Exit</span>
+                </h1>
+                <p class="text-[#AAAAAA] text-lg md:text-2xl">Over fundamentally strong companies</p>
+                <div class="mt-8">
+                    <button
+                        class="border-white border-[2px] px-8 py-2 rounded-3xl text-white hover:bg-white hover:text-black duration-300 cursor-pointer">
+                        Register For Free</button>
+                </div>
+            </div>
+            <div class=" flex justify-center items-center">
+                <img src="./Images/banner.png" alt="Banner" class="w-80 md:w-96">
+            </div>
+        </div>
+        <div
+            class=" max-w-screen-xl md:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center mx-[5%] gap-4 py-16">
+
+            <div class="rounded-xl p-[3px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
+                <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                    <div><img src="./Images/tabler_users.png" alt="user"></div>
+                    <p class="text-white font-medium mt-2">10 Lakh + users</p>
+                </div>
+            </div>
+
+            <div class="rounded-xl p-[3px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
+                <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                    <div><img src="./Images/mdi_register-outline.png" alt="register"></div>
+                    <p class="text-white font-medium mt-2">SEBI Registered RA <br># PMS #</p>
+                </div>
+            </div>
+
+            <div class="rounded-xl p-[3px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
+                <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                    <div><img src="./Images/ant-design_stock-outlined.png" alt="graph"></div>
+                    <p class="text-white font-medium mt-2">AUA: 400 Crores</p>
+                </div>
+            </div>
+
+            <div class="rounded-xl p-[3px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
+                <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                    <div><img src="./Images/iwwa_year.png" alt="calender"></div>
+                    <p class="text-white font-medium mt-2">Experience: 25 Years</p>
+                </div>
             </div>
         </div>
 
-        <div class="rounded-xl p-[3px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
-            <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
-                <div><img src="./Images/ant-design_stock-outlined.png" alt="graph"></div>
-                <p class="text-white font-medium mt-2">AUA: 400 Crores</p>
-            </div>
-        </div>
-
-        <div class="rounded-xl p-[3px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
-            <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
-                <div><img src="./Images/iwwa_year.png" alt="calender"></div>
-                <p class="text-white font-medium mt-2">Experience: 25 Years</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- banner starts here -->
+        <!-- banner starts here -->
 
 
-    <!-- products starts here -->
+        <!-- products starts here -->
 
-    <div class="bg-white">
-        <div class="max-w-screen-xl md:mx-auto   py-10 flex flex-col gap-12 -z-10 bg-no-repeat bg-center bg-cover"
-            style="background-image: url('./Images/Group 41.svg');">
-            <div class="flex flex-col gap-3">
-                <h2 class="font-semibold text-center text-4xl">Waya Products</h2>
-                <p class="text-[#898989] text-center mx-[5%] md:mx-[30%]">Comprehensive financial services designed to
-                    maximize
-                    your
-                    investment potential across all market
-                    segments</p>
-            </div>
-            <div
-                class="max-w-screen-xl   grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mx-4 md:mx-52   text-[#1C1C1E] ">
-                <div class=" bg-[#6DBDFF];">
+        <div class="bg-white">
+            <div class="max-w-screen-xl md:mx-auto   py-10 flex flex-col gap-12 -z-10 bg-no-repeat bg-center bg-cover"
+                style="background-image: url('./Images/Group 41.svg');">
+                <div class="flex flex-col gap-3">
+                    <h2 class="font-semibold text-center text-4xl">Waya Products</h2>
+                    <p class="text-[#898989] text-center mx-[5%] md:mx-[30%]">Comprehensive financial services designed
+                        to
+                        maximize
+                        your
+                        investment potential across all market
+                        segments</p>
+                </div>
+                <div
+                    class="max-w-screen-xl   grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mx-4 md:mx-52   text-[#1C1C1E] ">
+                    <div class=" bg-[#6DBDFF];">
 
+                        <div
+                            class="rounded-xl p-5 md:p-10   bg-white hover:shadow-2xl hover:shadow-[#dccff3] mx-6 my-4 flex flex-col gap-4 ">
+
+                            <div class="flex justify-center text-center"><img src="./Images/Group 25 (2).png"
+                                    alt="register">
+                            </div>
+                            <p class="font-bold text-xl text-center mt-2">Waya Equity</p>
+                            <p class=" text-justify">Expert equity recommendations and stock analysis for
+                                maximizing your
+                                investment returns</p>
+                            <ul class="text-left list-disc mx-5 ">
+                                <li class="list-disc">Short Term Recommendations</li>
+                                <li>Multibagger Recommendations</li>
+                                <li>Monthly and Weekly Byte</li>
+                            </ul>
+                            <div class="mt-2 text-center">
+                                <button class="  px-8 py-2 rounded-3xl underline cursor-pointer">
+                                    Know More</button>
+                            </div>
+                        </div>
+                    </div>
                     <div
-                        class="rounded-xl p-5 md:p-10   bg-white hover:shadow-2xl hover:shadow-[#dccff3] mx-6 my-4 flex flex-col gap-4 ">
-
-                        <div class="flex justify-center text-center"><img src="./Images/Group 25 (2).png"
+                        class="rounded-xl p-5 md:p-10 hover:shadow-2xl bg-white hover:shadow-[#dccff3] mx-4 my-4 flex flex-col gap-4">
+                        <div class="flex justify-center text-center"><img src="./Images/Group 24 (1).png"
                                 alt="register">
                         </div>
-                        <p class="font-bold text-xl text-center mt-2">Waya Equity</p>
-                        <p class=" text-justify">Expert equity recommendations and stock analysis for
-                            maximizing your
-                            investment returns</p>
-                        <ul class="text-left list-disc mx-5 ">
-                            <li class="list-disc">Short Term Recommendations</li>
-                            <li>Multibagger Recommendations</li>
-                            <li>Monthly and Weekly Byte</li>
+                        <p class="font-bold text-xl text-center mt-2">Waya FnO</p>
+                        <p class="text-justify">Advanced Futures and Options strategies for sophisticated trading
+                            opportunities</p>
+                        <ul class="text-left list-disc mx-5">
+                            <li class="list-disc">Index and Stock Option calls</li>
+                            <li>Hero-Zero Calls</li>
+                            <li>Interdaya and BTST calls</li>
+                        </ul>
+                        <div class="mt-2 text-center">
+                            <button class="  px-8 py-2 rounded-3xl underline cursor-pointer">
+                                Know More</button>
+                        </div>
+                    </div>
+                    <div
+                        class="rounded-xl p-5 md:p-10 hover:shadow-2xl bg-white hover:shadow-[#dccff3] mx-4 my-4 flex flex-col gap-4">
+                        <div class="flex justify-center text-center"><img src="./Images/Group 26 (3).png"
+                                alt="register">
+                        </div>
+                        <p class="font-bold text-xl text-center mt-2">Waya MCX</p>
+                        <p class=" text-justify">Gold , Oil , Silver and Other Commodities</p>
+                        <ul class="text-left list-disc mx-5">
+                            <li class="list-disc">Intraday and BTST Recommendations</li>
+                            <li>Options and Futures</li>
+                        </ul>
+                        <div class="mt-2 text-center">
+                            <button class="  px-8 py-2 rounded-3xl underline cursor-pointer">
+                                Know More</button>
+                        </div>
+                    </div>
+                    <div
+                        class="rounded-xl p-5 md:p-10 hover:shadow-2xl bg-white hover:shadow-[#dccff3]  mx-4 my-4 flex flex-col gap-4">
+                        <div class="flex justify-center text-center"><img src="./Images/Group 27.png" alt="register">
+                        </div>
+                        <p class="font-bold text-xl text-center mt-2">Waya PMS</p>
+                        <p class=" text-justify">Ranked : 3 according to PMS bazaar</p>
+                        <ul class="text-left list-disc mx-5">
+                            <li class="list-disc">Aspiration for 1000% in 7 years</li>
+                            <li>Category : Small Cap</li>
+
                         </ul>
                         <div class="mt-2 text-center">
                             <button class="  px-8 py-2 rounded-3xl underline cursor-pointer">
@@ -158,231 +209,186 @@
                         </div>
                     </div>
                 </div>
-                <div
-                    class="rounded-xl p-5 md:p-10 hover:shadow-2xl bg-white hover:shadow-[#dccff3] mx-4 my-4 flex flex-col gap-4">
-                    <div class="flex justify-center text-center"><img src="./Images/Group 24 (1).png" alt="register">
-                    </div>
-                    <p class="font-bold text-xl text-center mt-2">Waya FnO</p>
-                    <p class="text-justify">Advanced Futures and Options strategies for sophisticated trading
-                        opportunities</p>
-                    <ul class="text-left list-disc mx-5">
-                        <li class="list-disc">Index and Stock Option calls</li>
-                        <li>Hero-Zero Calls</li>
-                        <li>Interdaya and BTST calls</li>
-                    </ul>
-                    <div class="mt-2 text-center">
-                        <button class="  px-8 py-2 rounded-3xl underline cursor-pointer">
-                            Know More</button>
-                    </div>
-                </div>
-                <div
-                    class="rounded-xl p-5 md:p-10 hover:shadow-2xl bg-white hover:shadow-[#dccff3] mx-4 my-4 flex flex-col gap-4">
-                    <div class="flex justify-center text-center"><img src="./Images/Group 26 (3).png" alt="register">
-                    </div>
-                    <p class="font-bold text-xl text-center mt-2">Waya MCX</p>
-                    <p class=" text-justify">Gold , Oil , Silver and Other Commodities</p>
-                    <ul class="text-left list-disc mx-5">
-                        <li class="list-disc">Intraday and BTST Recommendations</li>
-                        <li>Options and Futures</li>
-                    </ul>
-                    <div class="mt-2 text-center">
-                        <button class="  px-8 py-2 rounded-3xl underline cursor-pointer">
-                            Know More</button>
-                    </div>
-                </div>
-                <div
-                    class="rounded-xl p-5 md:p-10 hover:shadow-2xl bg-white hover:shadow-[#dccff3]  mx-4 my-4 flex flex-col gap-4">
-                    <div class="flex justify-center text-center"><img src="./Images/Group 27.png" alt="register">
-                    </div>
-                    <p class="font-bold text-xl text-center mt-2">Waya PMS</p>
-                    <p class=" text-justify">Ranked : 3 according to PMS bazaar</p>
-                    <ul class="text-left list-disc mx-5">
-                        <li class="list-disc">Aspiration for 1000% in 7 years</li>
-                        <li>Category : Small Cap</li>
-
-                    </ul>
-                    <div class="mt-2 text-center">
-                        <button class="  px-8 py-2 rounded-3xl underline cursor-pointer">
-                            Know More</button>
-                    </div>
-                </div>
             </div>
         </div>
-    </div>
 
-    <!-- products ends here -->
+        <!-- products ends here -->
 
-    <!-- The Founder starts here -->
+        <!-- The Founder starts here -->
 
-    <div>
-        <div class=" pt-10 flex flex-col gap-10">
-            <h2 class="text-3xl font-semibold text-center text-white">Word From The Founder</h2>
-            <div class="flex justify-center ">
-                <iframe src="./Images/pms_desktop.mp4" class="w-[1280px] h-[540px] md:h-[720px] rounded-lg"
-                    frameborder="0">
-                </iframe>
-            </div>
-        </div>
         <div>
-            <div class=" flex flex-col gap-10 bg-no-repeat bg-center bg-cover "
-                style="background-image: url('./Images/Frame 3.svg');">
-                <div class="max-w-screen-xl mx-auto  rounded-t-[80px] bg-[#1C1C1E]  mt-20 pt-14">
-                    <h2 class="text-3xl font-semibold text-center text-white">Why Choose Waya Financial
-                        Technologies?</h2>
-                    <p class="text-[#AAAAAA] text-center md:mx-[35%]">Experience the different with our
-                        professional, compliant, and results-driven approach</p>
-                    <div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-center gap-4 py-16  ">
-                        <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
-                            <div><img src="./Images/Group 40.png" alt="user"></div>
-                            <p class="text-white font-semibold mt-2 text-[20px]">SEBI Registered</p>
-                            <p class="text-white">Fully compliant and registered research analyst ensuring
-                                regulatory adherence and professional standards</p>
-                        </div>
-                        <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
-                            <div><img src="./Images/Group 38.png" alt="user"></div>
-                            <p class="text-white font-semibold mt-2 text-[20px]">Expert Research</p>
-                            <p class="text-white">Deep market analysis and research-backed recommendations
-                                across
-                                equity, derivatives, and commodities</p>
-                        </div>
-                        <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
-                            <div><img src="./Images/Group 39.png" alt="user"></div>
-                            <p class="text-white font-semibold mt-2 text-[20px]">Proven Track Record</p>
-                            <p class="text-white">2 + years of consistent service delivery with a focus on
-                                maximizing client investment returns</p>
+            <div class=" pt-10 flex flex-col gap-10">
+                <h2 class="text-3xl font-semibold text-center text-white">Word From The Founder</h2>
+                <div class="flex justify-center ">
+                    <iframe src="./Images/pms_desktop.mp4" class="w-[1280px] h-[540px] md:h-[720px] rounded-lg"
+                        frameborder="0">
+                    </iframe>
+                </div>
+            </div>
+            <div>
+                <div class=" flex flex-col gap-10 bg-no-repeat bg-center bg-cover "
+                    style="background-image: url('./Images/Frame 3.svg');">
+                    <div class="max-w-screen-xl mx-auto  rounded-t-[80px] bg-[#1C1C1E]  mt-20 pt-14">
+                        <h2 class="text-3xl font-semibold text-center text-white">Why Choose Waya Financial
+                            Technologies?</h2>
+                        <p class="text-[#AAAAAA] text-center md:mx-[35%]">Experience the different with our
+                            professional, compliant, and results-driven approach</p>
+                        <div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-center gap-4 py-16  ">
+                            <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                                <div><img src="./Images/Group 40.png" alt="user"></div>
+                                <p class="text-white font-semibold mt-2 text-[20px]">SEBI Registered</p>
+                                <p class="text-white">Fully compliant and registered research analyst ensuring
+                                    regulatory adherence and professional standards</p>
+                            </div>
+                            <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                                <div><img src="./Images/Group 38.png" alt="user"></div>
+                                <p class="text-white font-semibold mt-2 text-[20px]">Expert Research</p>
+                                <p class="text-white">Deep market analysis and research-backed recommendations
+                                    across
+                                    equity, derivatives, and commodities</p>
+                            </div>
+                            <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                                <div><img src="./Images/Group 39.png" alt="user"></div>
+                                <p class="text-white font-semibold mt-2 text-[20px]">Proven Track Record</p>
+                                <p class="text-white">2 + years of consistent service delivery with a focus on
+                                    maximizing client investment returns</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- The Founder ends here -->
+        <!-- The Founder ends here -->
 
-    <!-- Get in touch starts here -->
-    <div class="bg-white">
-        <div class=" max-w-screen-xl mx-auto grid grid-cols-1 text-center py-16">
+        <!-- Get in touch starts here -->
+        <div class="bg-white">
+            <div class=" max-w-screen-xl mx-auto grid grid-cols-1 text-center py-16">
 
+                <div
+                    class="rounded-xl p-[3px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A] mx-[5%] md:mx-[30%]">
+                    <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[white] h-full">
+                        <h3 class="font-semibold text-3xl">Get In Touch</h3>
+                        <form class="w-full flex flex-col gap-4 ">
+                            <input type="text" placeholder="Name"
+                                class="border-b-2 border-[#1C1C1E]  p-3 w-full focus:outline-none text-[#1C1C1E]" />
+                            <input type="email" placeholder="Mobile Number"
+                                class="border-b-2 border-[#1C1C1E]  p-3 w-full focus:outline-none  text-[#1C1C1E]" />
+                            <input type="email" placeholder="Product Type"
+                                class="border-b-2 border-[#1C1C1E]  p-3 w-full focus:outline-none text-[#1C1C1E] " />
+                            <textarea placeholder="Message" rows="4"
+                                class="border-b-2 border-[#1C1C1E]  p-3 w-full focus:outline-none text-[#1C1C1E]"></textarea>
+                            <div>
+                                <button type="submit"
+                                    class="bg-black text-[20px] text-center text-white font-semibold rounded-3xl py-3 px-14 mt-2 hover:opacity-90 transition">
+                                    Send Request
+                                </button>
+                            </div>
+                            <div class="flex items-center justify-center my-3 text-gray-600">
+                                <div class="flex-1 h-px bg-[#1C1C1E]"></div>
+                                <span class="px-3 text-[#1C1C1E] text-[18px]">Or</span>
+                                <div class="flex-1 h-px bg-[#1C1C1E]"></div>
+                            </div>
+                            <p class="text-center text-[#1C1C1E] text-[20px]">Support@thewaya.com</p>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Get in touch ends here -->
+
+        <!-- Footer Starts here -->
+
+        <div>
             <div
-                class="rounded-xl p-[3px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A] mx-[5%] md:mx-[30%]">
-                <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[white] h-full">
-                    <h3 class="font-semibold text-3xl">Get In Touch</h3>
-                    <form class="w-full flex flex-col gap-4 ">
-                        <input type="text" placeholder="Name"
-                            class="border-b-2 border-[#1C1C1E]  p-3 w-full focus:outline-none text-[#1C1C1E]" />
-                        <input type="email" placeholder="Mobile Number"
-                            class="border-b-2 border-[#1C1C1E]  p-3 w-full focus:outline-none  text-[#1C1C1E]" />
-                        <input type="email" placeholder="Product Type"
-                            class="border-b-2 border-[#1C1C1E]  p-3 w-full focus:outline-none text-[#1C1C1E] " />
-                        <textarea placeholder="Message" rows="4"
-                            class="border-b-2 border-[#1C1C1E]  p-3 w-full focus:outline-none text-[#1C1C1E]"></textarea>
-                        <div>
-                            <button type="submit"
-                                class="bg-black text-[20px] text-center text-white font-semibold rounded-3xl py-3 px-14 mt-2 hover:opacity-90 transition">
-                                Send Request
-                            </button>
-                        </div>
-                        <div class="flex items-center justify-center my-3 text-gray-600">
-                            <div class="flex-1 h-px bg-[#1C1C1E]"></div>
-                            <span class="px-3 text-[#1C1C1E] text-[18px]">Or</span>
-                            <div class="flex-1 h-px bg-[#1C1C1E]"></div>
-                        </div>
-                        <p class="text-center text-[#1C1C1E] text-[20px]">Support@thewaya.com</p>
-                    </form>
+                class="max-w-screen-xl mx-auto flex pt-12 w-[100%] flex-col md:flex-row  justify-center items-center md:items-start">
+                <div class="flex flex-col gap-2 justify-center items-center md:items-start md:w-[60%]">
+                    <div class="flex w-16 h-16 md:w-20 md:h-20">
+                        <img src="./Images/logo.png" alt="logo">
+                    </div>
+                    <p class="text-[#AAAAAA] text-center md:text-left md:w-[60%]">Lorem Ipsum is simply dummy text of
+                        the
+                        printing and typesetting
+                        industry.</p><br><br>
+                    <p class="text-[#AAAAAA]">Download the app :</p>
+                    <div class="flex gap-4">
+                        <div class="w-32 h-16"><img src="./Images/googleplay.png" alt="googleplay"></div>
+                        <div class="w-32 h-16"><img src="./Images/appstore.png" alt="appstore"></div>
+                    </div>
+                </div>
+                <div class=" md:w-[40%] flex flex-col gap-[75px]">
+                    <div class="flex justify-center md:justify-start gap-24 ">
 
+                        <ul class="text-[#AAAAAA] flex flex-col gap-2">
+                            <p class="text-white font-semibold text-[20px] pb-2">Quick Links</p>
+                            <a href="#">
+                                <li>About Us</li>
+                            </a>
+                            <a href="#">
+                                <li>Products</li>
+                            </a>
+                            <a href="#">
+                                <li>Blogs</li>
+                            </a>
+                            <a href="#">
+                                <li>Community</li>
+                            </a>
+                        </ul>
+                        <ul class="text-[#AAAAAA] flex flex-col gap-2">
+                            <p class="text-white font-semibold text-[20px] pb-2">Follow Us :</p>
+                            <a href="#">
+                                <li class="flex gap-1"><img src="./Images/mdi_instagram.png" alt="">Instagram</li>
+                            </a>
+                            <a href="#">
+                                <li class="flex gap-1"><img src="./Images/akar-icons_linkedin-fill.png" alt="">Linkedin
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li class="flex gap-1"><img src="./Images/prime_twitter.png" alt="">Twitter</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <p class="text-[#AAAAAA] pb-2 md:pb-0">SEBI Registered Research Analyst - INH000010876</p>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Get in touch ends here -->
+        <!-- Footer ends here -->
 
-    <!-- Footer Starts here -->
+        <!-- Copyright start here -->
 
-    <div>
-        <div
-            class="max-w-screen-xl mx-auto flex pt-12 w-[100%] flex-col md:flex-row  justify-center items-center md:items-start">
-            <div class="flex flex-col gap-2 justify-center items-center md:items-start md:w-[60%]">
-                <div class="flex w-16 h-16 md:w-20 md:h-20">
-                    <img src="./Images/logo.png" alt="logo">
-                </div>
-                <p class="text-[#AAAAAA] text-center md:text-left md:w-[60%]">Lorem Ipsum is simply dummy text of the
-                    printing and typesetting
-                    industry.</p><br><br>
-                <p class="text-[#AAAAAA]">Download the app :</p>
-                <div class="flex gap-4">
-                    <div class="w-32 h-16"><img src="./Images/googleplay.png" alt="googleplay"></div>
-                    <div class="w-32 h-16"><img src="./Images/appstore.png" alt="appstore"></div>
-                </div>
+        <div class="bg-black py-4">
+            <div
+                class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-start gap-3 md:gap-0 md:justify-between ">
+                <p class="text-[#AAAAAA]">2022 Waya Financial Technologies Pvt Ltd</p>
+                <ul class="text-[#AAAAAA] flex gap-8">
+                    <a href="#">
+                        <li>Terms & Conditions</li>
+                    </a>
+                    <a href="#">
+                        <li>Privacy Policy</li>
+                    </a>
+                </ul>
             </div>
-            <div class=" md:w-[40%] flex flex-col gap-[75px]">
-                <div class="flex justify-center md:justify-start gap-24 ">
-
-                    <ul class="text-[#AAAAAA] flex flex-col gap-2">
-                        <p class="text-white font-semibold text-[20px] pb-2">Quick Links</p>
-                        <a href="#">
-                            <li>About Us</li>
-                        </a>
-                        <a href="#">
-                            <li>Products</li>
-                        </a>
-                        <a href="#">
-                            <li>Blogs</li>
-                        </a>
-                        <a href="#">
-                            <li>Community</li>
-                        </a>
-                    </ul>
-                    <ul class="text-[#AAAAAA] flex flex-col gap-2">
-                        <p class="text-white font-semibold text-[20px] pb-2">Follow Us :</p>
-                        <a href="#">
-                            <li class="flex gap-1"><img src="./Images/mdi_instagram.png" alt="">Instagram</li>
-                        </a>
-                        <a href="#">
-                            <li class="flex gap-1"><img src="./Images/akar-icons_linkedin-fill.png" alt="">Linkedin</li>
-                        </a>
-                        <a href="#">
-                            <li class="flex gap-1"><img src="./Images/prime_twitter.png" alt="">Twitter</li>
-                        </a>
-                    </ul>
-                </div>
-                <p class="text-[#AAAAAA] pb-2 md:pb-0">SEBI Registered Research Analyst - INH000010876</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer ends here -->
-
-    <!-- Copyright start here -->
-
-    <div class="bg-black py-4">
-        <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-start gap-3 md:gap-0 md:justify-between ">
-            <p class="text-[#AAAAAA]">2022 Waya Financial Technologies Pvt Ltd</p>
-            <ul class="text-[#AAAAAA] flex gap-8">
-                <a href="#">
-                    <li>Terms & Conditions</li>
-                </a>
-                <a href="#">
-                    <li>Privacy Policy</li>
-                </a>
-            </ul>
         </div>
     </div>
 
     <script>
-         const menuBtn = document.getElementById("mobile-menu-button");
-  const mobileMenu = document.getElementById("mobile-menu");
+        const menuBtn = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
 
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
 
-    // toggle icon ☰ <-> ✖
-    if (mobileMenu.classList.contains("hidden")) {
-      menuBtn.textContent = "☰";
-    } else {
-      menuBtn.textContent = "✖";
-    }
-  });
+            // toggle icon ☰ <-> ✖
+            if (mobileMenu.classList.contains("hidden")) {
+                menuBtn.textContent = "☰";
+            } else {
+                menuBtn.textContent = "✖";
+            }
+        });
     </script>
 </body>
 
