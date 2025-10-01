@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./Images/logo.png" type="image/x-icon">
+    <title>Products</title>
+</head>
+
+<body>
+    <div class="bg-[#1C1C1E]">
+        <div class="bg-[#1C1C1E] sticky top-0" style="z-index: 3;">
+            <div class="max-w-screen-xl md:mx-auto flex justify-between items-center py-4 mx-[5%]"
+                style="font-family: 'Inter', sans-serif;">
+
+                <!-- Logo -->
+                <div class="flex w-16 h-16 md:w-20 md:h-20">
+                    <a href="./index.html">
+                        <img src="./Images/logo.png" alt="Logo">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex gap-14 items-center">
+                    <ul class="flex gap-16 text-white text-[18px]">
+                        <li><a href="#" class="hover:text-gray-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-gray-400 transition">Products</a></li>
+                        <li><a href="#" class="hover:text-gray-400 transition">Blogs</a></li>
+                        <li><a href="#" class="hover:text-gray-400 transition">Community</a></li>
+                    </ul>
+                    <button
+                        class="border-white border-[2px] text-[18px] px-10 py-3 rounded-full text-white hover:bg-white hover:text-black transition cursor-pointer">
+                        Contact Us</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white text-3xl focus:outline-none">
+                        ☰
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden w-full absolute left-0 right-0 bg-[#2C2C2E] shadow-lg z-10">
+                <ul class="flex flex-col text-white text-center py-4 space-y-3"
+                    style="font-family: 'Inter', sans-serif;">
+                    <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">About Us</a></li>
+                    <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">Products</a></li>
+                    <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">Blogs</a></li>
+                    <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">Community</a></li>
+                    <li>
+                        <div class="flex">
+                            <button
+                                class="mt-2 w-3/4 mx-auto border-white border-[2px] px-8 py-2 rounded-3xl text-white hover:bg-white hover:text-black transition cursor-pointer">
+                                Contact Us</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- nabvar ends here -->
+
+        <!-- banner starts here -->
+        <div class="bg-no-repeat bg-[center_right] md:bg-fixed"
+            style="background-image: url('./Images/Group 66.png'); ">
+
+            <div class="max-w-screen-xl mx-[5%] md:mx-auto flex flex-col md:flex-row justify-center items-center md:items-start md:justify-between  gap-10 text-center md:text-left text-white py-10 pt-14"
+                style="font-family: 'Inter', sans-serif;">
+
+                <div class=" flex flex-col gap-2 justify-center item-center md:items-start my-auto md:w-[40%]">
+
+                    <h1 class="font-semibold text-4xl  sm:text-5xl text-center md:text-left text-white leading-tight"
+                        style="font-family: 'Sora', sans-serif;">
+                        Unlock <br>
+                        <span class="text-[#FFBD00]">Futures & Options</span> <br>
+                        Trading with Waya
+                    </h1>
+                    <p class="text-[#AAAAAA] text-lg md:text-xl pt-6">Get 2-3 Well Researched Intraday Option Calls</p>
+                    <div class="mt-4">
+                        <button
+                            class="border-white border-[2px] px-8 py-3 rounded-full text-black bg-white  duration-300 cursor-pointer">
+                            Get Started</button>
+                    </div>
+                </div>
+                <div class=" flex justify-center items-center md:w-[60%]">
+                    <img src="./Images/product_banner.png" alt="Banner" width="1000px">
+                </div>
+            </div>
+            <h2 class="text-[32px] text-white text-center font-semibold" style="font-family: 'Sora', sans-serif;">
+                What You Get?
+            </h2>
+            <div
+                class=" max-w-screen-xl md:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-center md:px-20 mx-[5%] gap-8 md:gap-16 py-16">
+
+                <div class="rounded-xl p-[2px]  bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
+                    <div class="flex gap-4 justify-start py-8 px-11 items-center rounded-xl bg-[#1C1C1E] h-full">
+                        <div><img src="./Images/image 2.png" alt="user"></div>
+                        <p class="text-white font-semibold mt-2 text-[20px] text-left"
+                            style="font-family: 'Sora', sans-serif;">Options <br> Calls</p>
+                    </div>
+                </div>
+
+                <div class="rounded-xl p-[2px]  bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
+                    <div class="flex gap-4 justify-start py-8 px-11 items-center rounded-xl bg-[#1C1C1E] h-full">
+                        <div><img src="./Images/image 3.png" alt="register"></div>
+                        <p class="text-white font-semibold mt-2 text-[20px] text-left"
+                            style="font-family: 'Sora', sans-serif;">Options <br> Strategies</p>
+                    </div>
+                </div>
+
+                <div class="rounded-xl p-[2px]  bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
+                    <div class="flex gap-4 justify-center py-8  items-center rounded-xl bg-[#1C1C1E] h-full">
+                        <div><img src="./Images/image 4.png" alt="graph"></div>
+                        <p class="text-white font-semibold mt-2 text-[20px] text-left"
+                            style="font-family: 'Sora', sans-serif;">Futures <br> Index/ Stocks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- banner starts here -->
+
+        <!-- Futures & Options starts here -->
+
+        <div class="bg-white">
+            <div class="max-w-screen-xl mx-[5%] md:mx-auto flex flex-col md:flex-row justify-center md:justify-between  py-10"
+                style="font-family: 'Inter', sans-serif;">
+
+                <!-- Left Image -->
+                <div class="md:w-[45%]">
+                    <img src="./Images/Group 65.png" alt="" class="w-full h-auto">
+                </div>
+
+                <!-- Right Content -->
+                <div class="md:w-[45%] flex flex-col gap-6 mt-9">
+                    <h2 class="font-semibold text-2xl md:text-3xl lg:text-4xl" style="font-family: 'Sora', sans-serif;">
+                        Why Waya Futures & Options?
+                    </h2>
+                    <p class="text-base md:text-lg lg:text-xl text-[#898989] pb-4">
+                        Waya Futures and Options (F&O) is India's first F&O advisory app, designed to enhance your
+                        trading experience and profitability. We provide meticulously crafted recommendations based on
+                        rigorously tested statistical models.
+                    </p>
+
+                    <!-- Point 1 -->
+                    <div class="flex gap-4 justify-start items-center">
+                        <div class="w-[45%] sm:w-[15%]  md:w-[20%]">
+                            <img src="./Images/image 5.png" alt="" class="w-20 h-auto">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="text-lg md:text-xl lg:text-2xl font-semibold "
+                                style="font-family: 'Sora', sans-serif;">
+                                Daily index option calls
+                            </h3>
+                            <p class="text-sm md:text-base text-[#898989] ">
+                                Get 2-3 Intraday option calls in Nifty & BankNifty based on price action theory.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Point 2 -->
+                    <div class="flex gap-4 justify-start items-center">
+                        <div class="w-[30%] sm:w-[15%] md:w-[16%]">
+                            <img src="./Images/image 6.png" alt="" class="w-20 h-auto">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="text-lg md:text-xl lg:text-2xl font-semibold"
+                                style="font-family: 'Sora', sans-serif;">
+                                Hero-Zero Calls
+                            </h3>
+                            <p class="text-sm md:text-base text-[#898989]">
+                                Risk Managed Hero-Zero Calls on every expiry day.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Point 3 -->
+                    <div class="flex gap-4 justify-start items-center">
+                        <div class="w-[36%] sm:w-[15%] md:w-[16%]">
+                            <img src="./Images/image 7.png" alt="" class="w-20 h-auto">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="text-lg md:text-xl lg:text-2xl font-semibold"
+                                style="font-family: 'Sora', sans-serif;">
+                                Timely Exits
+                            </h3>
+                            <p class="text-sm md:text-base text-[#898989]">
+                                We give calls with hold period ranging from Intraday to 5 days.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Point 4 -->
+                    <div class="flex gap-4 justify-start items-center">
+                        <div class="w-[40%] sm:w-[15%] md:w-[18%]">
+                            <img src="./Images/image 8.png" alt="" class="w-20 h-auto">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="text-lg md:text-xl lg:text-2xl font-semibold"
+                                style="font-family: 'Sora', sans-serif;">
+                                Proper Risk Management
+                            </h3>
+                            <p class="text-sm md:text-base text-[#898989]">
+                                The call has high Risk-Reward ratio with high accuracy to hit a target.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Futures & Options starts here -->
+
+        <!-- Pricing starts here -->
+
+        <div>
+            <div class="max-w-screen-xl mx-[5%] md:mx-auto py-10 flex flex-col gap-8"
+                style="font-family: 'Inter', sans-serif;">
+                <h2 class="text-[32px] font-semibold text-white text-center" style="font-family: 'Sora', sans-serif;">
+                    Pricing
+                </h2>
+                <p class="font-medium text-2xl text-[#AAAAAA] text-center">Enjoy exclusive benefits by subscribing to
+                    any of our plans</p>
+                <div class="flex flex-col md:flex-row justify-center items-center md:item-start gap-6">
+                    <div class="px-3 py-3 bg-[#DCEEFD] flex flex-col gap-6 sm:w-[60%] md:w-[30%] rounded-[10px]">
+                        <div class="flex gap-3 pr-[76px] sm:pr-0">
+                            <div><img src="./Images/Group 46.png" alt=""></div>
+                            <p class="text-[#1C1C1E] text-[20px] font-medium">Monthly <br><span
+                                    class="text-[17px] text-[#1C1C1E] ">₹3500/month</span></p>
+                        </div>
+                        <div class="flex justify-end">
+                            <p class="text-[#094675] font-semibold text-[20px] md:text-[30px]">₹3500</p>
+                        </div>
+                    </div>
+                    <div class="px-3 py-3 bg-[#FCEEDC] flex flex-col gap-6 sm:w-[60%] md:w-[30%] rounded-[10px]">
+                        <div class="flex justify-between items-start">
+                            <div class="flex  gap-3">
+                                <div><img src="./Images/Group 46 (1).png" alt=""></div>
+                                <p class="text-[#1C1C1E] text-[20px] font-medium">Quarterly <br><span
+                                        class="text-[17px] text-[#1C1C1E] ">₹1500/month</span></p>
+                            </div>
+                            <div class="bg-[#50D77D] rounded-[50px] px-2 ">
+                                <p class="text-white font-semibold text-[15px]">10% OFF</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-baseline gap-2">
+                            <p class="text-[#70430D] text-[14px] font-semibold"><span class=" font-light">Code:</span>WAYAFNO10</p>
+                            <p class="text-[#70430D] font-semibold text-[20px] md:text-[30px]"><span
+                                    class="text-[#AAAAAA] text-[15px] md:text-[20px] line-through decoration-[#FF0000] ">₹5000</span>
+                                ₹4500</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center items-center">
+                    <button
+                        class="border-white border-[2px] px-8 py-3 rounded-full text-black bg-white  duration-300 cursor-pointer">
+                        Register Now</button>
+                </div>
+                <div class="w-full gap-4 mt-20 grid grid-cols-1 md:grid-cols-4 text-center">
+
+                    <!-- Stat 1 -->
+                    <div
+                        class="flex gap-3 items-center justify-center py-4 border-b border-[#EDA146] md:border-b-0 md:border-r md:border-[#EDA146]">
+                        <h2 class="counter text-5xl md:text-[63px] font-extrabold text-[#FFBD00]" data-target="5"
+                            data-suffix="L+">0</h2>
+                        <p class="text-sm md:text-semibold text-white text-[20px] text-left">App <br> Downloads</p>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div
+                        class="flex gap-3 items-center justify-center py-4 border-b border-[#EDA146] md:border-b-0 md:border-r md:border-[#EDA146]">
+                        <h2 class="counter text-5xl md:text-[63px] font-extrabold text-[#FFBD00]" data-target="50"
+                            data-suffix="K+">0</h2>
+                        <p class="text-sm md:text-semibold text-white text-[20px] text-left">Subscribed <br> Users</p>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div
+                        class="flex gap-3 items-center justify-center py-4 border-b border-[#EDA146] md:border-b-0 md:border-r md:border-[#EDA146]">
+                        <h2 class="counter text-5xl md:text-[63px] font-extrabold text-[#FFBD00]" data-target="4.6"
+                            data-decimal="true">0</h2>
+                        <p class="text-sm md:text-semibold text-white text-[20px] text-left">Top <br> Ratings</p>
+                    </div>
+
+                    <!-- Stat 4 (no border on last item) -->
+                    <div class="flex gap-3 items-center justify-center py-4">
+                        <h2 class="counter text-5xl md:text-[63px] font-extrabold text-[#FFBD00]" data-target="86"
+                            data-suffix="%">0</h2>
+                        <p class="text-sm md:text-semibold text-white text-[20px] text-left">Target-Hit <br> Rate</p>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div class="-z-10">
+                <div class=" flex flex-col gap-10 bg-no-repeat bg-center bg-cover "
+                    style="background-image: url('./Images/Frame 3.svg');">
+                    <div class="max-w-screen-xl mx-auto  rounded-t-[80px] bg-[#1C1C1E]  mt-20 pt-14"
+                        style="font-family: 'Inter', sans-serif;">
+                        <h2 class="text-[40px] font-semibold text-center 
+           bg-gradient-to-b from-[#42C6FF] via-[#C578E3] to-[#EDA146]
+           bg-clip-text text-transparent" style="font-family: 'Sora', sans-serif;">
+                            Start your
+                        </h2>
+                        <h2 class="text-[40px] font-semibold text-center 
+           bg-gradient-to-b from-[#42C6FF] via-[#C578E3] to-[#EDA146]
+           bg-clip-text text-transparent" style="font-family: 'Sora', sans-serif;">
+                            Option Trading journey with us
+                        </h2>
+
+                        <img src="./Images/trading.png" alt="" class="z-10 " style="position: relative; z-index: 2;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Pricing ends here -->
+
+        <!-- Revolution starts here -->
+
+        <section class="bg-white text-white py-16 -mt-[25%] pt-[25%]" style="position: relative; z-index: 1;">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <!-- Subtitle -->
+
+                <div class="flex items-center justify-center mt-10   " style="font-family: 'Sora', sans-serif;">
+                    <div class="w-[135px] h-[5px]  " style="background: linear-gradient(to right, 
+              #EDA146, 
+              #C578E3, 
+              #6DBDFF,  
+              #77F0E4);">
+                    </div>
+                    <span class="px-3 font-semibold text-lg md:text-[32px] text-[#1C1C1E]">Join the revolution</span>
+                    <div class="w-[135px]  h-[5px] bg-[#1C1C1E]" style="background: linear-gradient(to right, 
+              #EDA146, 
+              #C578E3, 
+              #6DBDFF,  
+              #77F0E4);"></div>
+                </div>
+                <p class=" font-semibold text-lg md:text-[32px] text-[#1C1C1E]"
+                    style="font-family: 'Sora', sans-serif;">
+                    <span class="font-semibold text-[#1C1C1E]">App Name: Waya – Futures & Options</span>
+                </p>
+
+                <!-- Download buttons -->
+                <div class="mt-6 flex flex-col justify-center gap-4" style="font-family: 'Inter', sans-serif;">
+                    <p class="font-medium text-2xl text-[#AAAAAA]">Available on</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#" class="inline-block">
+                            <img src="./Images/googleplay.png" alt="Google Play" class="h-12">
+                        </a>
+                        <a href="#" class="inline-block">
+                            <img src="./Images/appstore.png" alt="App Store" class="h-12">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Revolution ends here -->
+
+        <!-- FAQ starts here -->
+
+        <div class="bg-white">
+            <div class="max-w-screen-xl mx-[5%] md:mx-auto py-10 px-5 md:px-20"
+                style="font-family: 'Inter', sans-serif;">
+
+                <!-- FAQ Item 01 -->
+                <div class="py-8 border-b-[1px] border-[#E6E6E6]">
+                    <button class="flex items-center justify-between w-full text-left faq-btn">
+                        <div class="flex items-center gap-4 md:gap-12">
+                            <span
+                                class="text-[#AAAAAA] font-bold w-8 md:w-6 text-2xl sm:text-3xl md:text-[48px]">01</span>
+                            <span class="font-semibold text-[#1C1C1E] text-lg sm:text-xl md:text-2xl lg:text-[32px]">
+                                How do I contact Waya FnO Support Team?
+                            </span>
+                        </div>
+                        <span
+                            class="faq-icon flex items-center justify-center w-14 h-8 sm:w-8 sm:h-8 md:w-8 md:h-8 rounded-full bg-[#F3F4F5] text-[#1C1C1E] text-base sm:text-lg md:text-xl font-semibold">
+                            +
+                        </span>
+                    </button>
+                    <div
+                        class="faq-content hidden mt-2 ml-10 md:ml-[74px] text-sm sm:text-base md:text-[16px] text-[#5A5A60]">
+                        Write an email to us at options@thewaya.com for any queries.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 02 -->
+                <div class="py-8 border-b-[1px] border-[#E6E6E6]">
+                    <button class="flex items-center justify-between w-full text-left faq-btn">
+                        <div class="flex items-center gap-4 md:gap-12">
+                            <span
+                                class="text-[#AAAAAA] font-bold w-8 md:w-6 text-2xl sm:text-3xl md:text-[48px]">02</span>
+                            <span class="font-semibold text-[#1C1C1E] text-lg sm:text-xl md:text-2xl lg:text-[32px]">
+                                How many index option calls are given in a day?
+                            </span>
+                        </div>
+                        <span
+                            class="faq-icon flex items-center justify-center w-14 h-8 sm:w-8 sm:h-8 md:w-8 md:h-8 rounded-full bg-[#F3F4F5] text-[#1C1C1E] text-base sm:text-lg md:text-xl font-semibold">
+                            +
+                        </span>
+                    </button>
+                    <div
+                        class="faq-content hidden mt-2 ml-10 md:ml-[74px] text-sm sm:text-base md:text-[16px] text-[#5A5A60]">
+                        We try to give minimum 2 index option calls daily based on market conditions.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 03 -->
+                <div class="py-8 border-b-[1px] border-[#E6E6E6]">
+                    <button class="flex items-center justify-between w-full text-left faq-btn">
+                        <div class="flex items-center gap-4 md:gap-12">
+                            <span
+                                class="text-[#AAAAAA] font-bold w-8 md:w-6 text-2xl sm:text-3xl md:text-[48px]">03</span>
+                            <span class="font-semibold text-[#1C1C1E] text-lg sm:text-xl md:text-2xl lg:text-[32px]">
+                                Do we offer trial period?
+                            </span>
+                        </div>
+                        <span
+                            class="faq-icon flex items-center justify-center w-8 h-8 sm:w-8 sm:h-8 md:w-8 md:h-8 rounded-full bg-[#F3F4F5] text-[#1C1C1E] text-base sm:text-lg md:text-xl font-semibold">
+                            +
+                        </span>
+                    </button>
+                    <div
+                        class="faq-content hidden mt-2 ml-10 md:ml-[74px] text-sm sm:text-base md:text-[16px] text-[#5A5A60]">
+                        No we do not give trial period because we believe our accuracy is very high and the cost of
+                        subscription is easily recovered by our subscribers.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 04 -->
+                <div class="py-8 border-b-[1px] border-[#E6E6E6]">
+                    <button class="flex items-center justify-between w-full text-left faq-btn">
+                        <div class="flex items-center gap-4 md:gap-12">
+                            <span
+                                class="text-[#AAAAAA] font-bold w-8 md:w-6 text-2xl sm:text-3xl md:text-[48px]">04</span>
+                            <span class="font-semibold text-[#1C1C1E] text-lg sm:text-xl md:text-2xl lg:text-[32px]">
+                                How much should I invest in options?
+                            </span>
+                        </div>
+                        <span
+                            class="faq-icon flex items-center justify-center w-12 h-8 sm:w-8 sm:h-8 md:w-8 md:h-8 rounded-full bg-[#F3F4F5] text-[#1C1C1E] text-base sm:text-lg md:text-xl font-semibold">
+                            +
+                        </span>
+                    </button>
+                    <div
+                        class="faq-content hidden mt-2 ml-10 md:ml-[74px] text-sm sm:text-base md:text-[16px] text-[#5A5A60]">
+                        We suggest you to start with 1 lot which will take around Rs. 10-15K.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 05 -->
+                <div class="py-8 border-b-[1px] border-[#E6E6E6]">
+                    <button class="flex items-center justify-between w-full text-left faq-btn">
+                        <div class="flex items-center gap-4 md:gap-12 ">
+                            <span
+                                class="text-[#AAAAAA] font-bold w-8 md:w-6 text-2xl sm:text-3xl md:text-[48px]">05</span>
+                            <span class="font-semibold text-[#1C1C1E] text-lg sm:text-xl md:text-2xl lg:text-[32px]">
+                                How do I get Rs. 500 cashback via referral?
+                            </span>
+                        </div>
+                        <span
+                            class="faq-icon flex items-center justify-center w-14 h-8 sm:w-8 sm:h-8 md:w-8 md:h-8 rounded-full bg-[#F3F4F5] text-[#1C1C1E] text-base sm:text-lg md:text-xl font-semibold">
+                            +
+                        </span>
+                    </button>
+                    <div
+                        class="faq-content hidden mt-2 ml-10 md:ml-[74px] text-sm sm:text-base md:text-[16px] text-[#5A5A60]">
+                        To refer please download the app and go to the referral section. Click on the referral button
+                        and share the link. Once they subscribe, you will get a cashback of Rs. 500 via UPI.
+                    </div>
+                </div>
+
+                <!-- Register Button -->
+                <div class="flex justify-center items-center mt-8">
+                    <button
+                        class="border-[#1C1C1E] border-2 text-[16px] sm:text-[18px] px-8 sm:px-10 py-2 sm:py-3 rounded-full bg-white text-[#1C1C1E] transition cursor-pointer">
+                        Register Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FAQ ends here  -->
+
+        <!-- Footer Starts here -->
+
+        <div>
+            <div
+                class="max-w-screen-xl  mx-auto flex pt-12 w-[100%] flex-col md:flex-row  justify-center items-center md:items-start">
+                <div class="flex flex-col gap-2 justify-center items-center md:items-start md:w-[60%]"
+                    style="font-family: 'Inter', sans-serif;">
+                    <div class="flex w-20 h-20">
+                        <img src="./Images/logo.png" alt="logo">
+                    </div>
+                    <p class="text-[#AAAAAA] mx-[5%] md:mx-0 text-center md:text-left md:w-[60%]"
+                        style="font-family: 'Sora', sans-serif;">Lorem Ipsum is simply
+                        dummy text of
+                        the
+                        printing and typesetting
+                        industry.</p><br><br>
+                    <p class="text-[#AAAAAA]">Download the app :</p>
+                    <div class="flex gap-4">
+                        <div class="w-32 h-16"><img src="./Images/googleplay.png" alt="googleplay"></div>
+                        <div class="w-32 h-16"><img src="./Images/appstore.png" alt="appstore"></div>
+                    </div>
+                </div>
+                <div class=" md:w-[40%] flex flex-col gap-[75px]">
+                    <div class="flex justify-center md:justify-start gap-24 ">
+
+                        <ul class="text-[#AAAAAA] flex flex-col gap-2" style="font-family: 'Inter', sans-serif;">
+                            <p class="text-white font-semibold text-[20px] pb-2">Quick Links</p>
+                            <a href="#">
+                                <li>About Us</li>
+                            </a>
+                            <a href="#">
+                                <li>Products</li>
+                            </a>
+                            <a href="#">
+                                <li>Blogs</li>
+                            </a>
+                            <a href="#">
+                                <li>Community</li>
+                            </a>
+                        </ul>
+                        <ul class="text-[#AAAAAA] flex flex-col gap-2" style="font-family: 'Inter', sans-serif;">
+                            <p class="text-white font-semibold text-[20px] pb-2">Follow Us :</p>
+                            <a href="#">
+                                <li class="flex gap-1"><img src="./Images/mdi_instagram.png" alt="">Instagram</li>
+                            </a>
+                            <a href="#">
+                                <li class="flex gap-1"><img src="./Images/akar-icons_linkedin-fill.png" alt="">Linkedin
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li class="flex gap-1"><img src="./Images/prime_twitter.png" alt="">Twitter</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <p class="text-[#AAAAAA] pb-2 md:pb-0" style="font-family: 'Inter', sans-serif;">SEBI Registered
+                        Research Analyst - INH000010876</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer ends here -->
+
+        <!-- Copyright start here -->
+
+        <div class="bg-black py-4">
+            <div
+                class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-start gap-3 md:gap-0 md:justify-between ">
+                <p class="text-[#AAAAAA]" style="font-family: 'Sora', sans-serif;">2022 Waya Financial Technologies Pvt
+                    Ltd</p>
+                <ul class="text-[#AAAAAA] flex gap-8" style="font-family: 'Inter', sans-serif;">
+                    <a href="#">
+                        <li>Terms & Conditions</li>
+                    </a>
+                    <a href="#">
+                        <li>Privacy Policy</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // lower = faster
+
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const isDecimal = counter.getAttribute('data-decimal') === "true";
+            const suffix = counter.getAttribute('data-suffix') || "";
+
+            const animate = () => {
+                const current = +counter.getAttribute('data-current') || 0;
+                const inc = target / speed;
+                let next = current + inc;
+
+                if (next < target) {
+                    counter.setAttribute('data-current', next);
+                    counter.innerText = isDecimal
+                        ? next.toFixed(1) + suffix
+                        : Math.ceil(next) + suffix;
+                    setTimeout(animate, 20);
+                } else {
+                    counter.innerText = isDecimal ? target.toFixed(1) + suffix : target + suffix;
+                }
+            };
+            animate();
+        });
+
+        document.querySelectorAll(".faq-btn").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector(".faq-icon");
+
+                if (content.classList.contains("hidden")) {
+                    document.querySelectorAll(".faq-content").forEach((c) => c.classList.add("hidden"));
+                    document.querySelectorAll(".faq-icon").forEach((i) => i.textContent = "+");
+
+                    content.classList.remove("hidden");
+                    icon.textContent = "×";
+                } else {
+                    content.classList.add("hidden");
+                    icon.textContent = "+";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
