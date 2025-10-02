@@ -28,7 +28,7 @@
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex gap-14 items-center">
+                <div class="hidden lg:flex gap-14 items-center">
                     <ul class="flex gap-16 text-white text-[18px]">
                         <li><a href="#" class="hover:text-gray-400 transition">About Us</a></li>
                         <li><a href="#" class="hover:text-gray-400 transition">Products</a></li>
@@ -41,7 +41,7 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
+                <div class="lg:hidden flex items-center">
                     <button id="mobile-menu-button" class="text-white text-3xl focus:outline-none">
                         ☰
                     </button>
@@ -49,7 +49,7 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden w-full absolute left-0 right-0 bg-[#2C2C2E] shadow-lg z-10">
+            <div id="mobile-menu" class="hidden lg:hidden w-full absolute left-0 right-0 bg-[#2C2C2E] shadow-lg z-10">
                 <ul class="flex flex-col text-white text-center py-4 space-y-3"
                     style="font-family: 'Inter', sans-serif;">
                     <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">About Us</a></li>
@@ -86,14 +86,14 @@
                     </h1>
                     <p class="text-[#AAAAAA] text-lg md:text-xl pt-6">Get 2-3 Well Researched Intraday Option Calls</p>
                     <div class="mt-4">
-                        <a href=""
-                            class="border-white border-[2px] px-10 py-3 rounded-full font-semibold text-black bg-white  duration-300 cursor-pointer">
+                        <a href="" class="border-white border-[2px] px-10 py-3 rounded-full font-semibold text-black bg-white  duration-300 cursor-pointer">
                             Get Started</a>
                     </div>
                 </div>
                 <div class="flex justify-center items-center md:w-[60%]">
-                    <img src="./Images/product_banner.png" alt="Banner" class="max-w-full xl:max-w-[129%] h-auto">
-                </div>
+    <img src="./Images/product_banner.png" alt="Banner" 
+         class=" w-auto  h-auto">
+</div>
             </div>
             <h2 class="text-[32px] text-white text-center font-semibold" style="font-family: 'Sora', sans-serif;">
                 What You Get?
@@ -230,7 +230,7 @@
                 </h2>
                 <p class="font-medium text-2xl text-[#AAAAAA] text-center">Enjoy exclusive benefits by subscribing to
                     any of our plans</p>
-                <div class="flex flex-col md:flex-row justify-center items-center md:item-start gap-6">
+                <div class="flex flex-col md:flex-row  justify-center items-center md:item-start gap-6">
                     <div class="px-3 py-3 bg-[#DCEEFD] flex flex-col gap-6 sm:w-[60%] md:w-[30%] rounded-[10px]">
                         <div class="flex gap-3 pr-[76px] sm:pr-0">
                             <div><img src="./Images/Group 46.png" alt=""></div>
@@ -253,8 +253,7 @@
                             </div>
                         </div>
                         <div class="flex justify-between items-baseline gap-2">
-                            <p class="text-[#70430D] text-[14px] font-semibold"><span
-                                    class=" font-light">Code:</span>WAYAFNO10</p>
+                            <p class="text-[#70430D] text-[14px] font-semibold"><span class=" font-light">Code:</span>WAYAFNO10</p>
                             <p class="text-[#70430D] font-semibold text-[20px] md:text-[30px]"><span
                                     class="text-[#AAAAAA] text-[15px] md:text-[20px] line-through decoration-[#FF0000] ">₹5000</span>
                                 ₹4500</p>
@@ -268,7 +267,7 @@
                         class="border-white border-[2px] px-8 py-3 rounded-full text-black bg-white  duration-300 cursor-pointer">
                         Register Now</button>
                 </div>
-                <div class="w-full gap-4 mt-20 grid grid-cols-1 md:grid-cols-4 text-center">
+                <div class="w-full gap-4 mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 text-center">
 
                     <!-- Stat 1 -->
                     <div
@@ -623,6 +622,19 @@
                     icon.textContent = "+";
                 }
             });
+        });
+        const menuBtn = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+
+            // toggle icon ☰ <-> ✖
+            if (mobileMenu.classList.contains("hidden")) {
+                menuBtn.textContent = "☰";
+            } else {
+                menuBtn.textContent = "✖";
+            }
         });
     </script>
 </body>
