@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./Images/logo.png" type="image/x-icon">
+    <title>TheWaya</title>
+</head>
+
+<body>
+
+    <div class="bg-[#1C1C1E]">
+        <!-- nabvar starts here -->
+
+        <div class="bg-[#1C1C1E] sticky top-0">
+            <div class="max-w-screen-xl md:mx-auto flex justify-between items-center py-4 mx-[5%]"
+                style="font-family: 'Inter', sans-serif;">
+
+                <!-- Logo -->
+                <div class="flex w-16 h-16 md:w-20 md:h-20">
+                    <a href="./index.html">
+                        <img src="./Images/logo.png" alt="Logo">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex gap-14 items-center">
+                    <ul class="flex gap-16 text-white text-[18px]">
+                        <li><a href="./aboutus.html" class="hover:text-gray-400 transition">About Us</a></li>
+                        <li><a href="#productsfour" class="hover:text-gray-400 transition">Products</a></li>
+                        <li><a href="#" class="hover:text-gray-400 transition">Blogs</a></li>
+                        <li><a href="#" class="hover:text-gray-400 transition">Community</a></li>
+                    </ul>
+                    <button
+                        class="border-white border-[2px] text-[18px] px-10 py-3 rounded-full text-white hover:bg-white hover:text-black transition cursor-pointer">
+                        Contact Us</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white text-3xl focus:outline-none">
+                        ☰
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden w-full absolute left-0 right-0 bg-[#2C2C2E] shadow-lg z-10">
+                <ul class="flex flex-col text-white text-center py-4 space-y-3"
+                    style="font-family: 'Inter', sans-serif;">
+                    <li><a href="./aboutus.html" class="block py-2 hover:bg-[#3C3C3E] transition">About Us</a></li>
+                    <li><a href="./index.html" class="block py-2 hover:bg-[#3C3C3E] transition">Products</a></li>
+                    <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">Blogs</a></li>
+                    <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">Community</a></li>
+                    <li>
+                        <div class="flex">
+                            <button
+                                class="mt-2 w-3/4 mx-auto border-white border-[2px] px-8 py-2 rounded-3xl text-white hover:bg-white hover:text-black transition cursor-pointer">
+                                Contact Us</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- nabvar ends here -->
+
+        <!-- banner starts here -->
+
+        <div class="bg-no-repeat bg-cover bg-center" style="background-image: url('./Images/Group 73 (1).png')">
+            <div class="max-w-screen-xl md:mx-auto text-center py-20 mx-[5%] flex flex-col gap-6 ">
+                <h1 class="text-5xl text-white font-semibold lg:mx-[20%] " style="font-family: 'Sora', sans-serif;">We
+                    deliver <span class="bg-gradient-to-b from-[#42C6FF] via-[#C578E3] to-[#EDA146]
+                         bg-clip-text text-transparent"> great returns </span> in a short span</h1>
+                <p class="text-[#AAAAAA] font-medium text-[24px]" style="font-family: 'Inter', sans-serif;">Over
+                    fundamentally strong companies</p>
+                <div
+                    class=" bg-[linear-gradient(to_bottom_left,_#36D5C6_0%,_#36D5C6_40%,_#B25CD4_70%,_#0F93FF_100%)] mx-[32%] rounded-[30px] mt-6">
+                    <h3 class="text-white font-semibold text-[38px] pt-4" style="font-family: 'Sora', sans-serif;">
+                        Believe us
+                    </h3>
+                    <div class="flex justify-center my-6">
+                        <img src="./Images/Group 66 (1).png" alt="">
+                    </div>
+                    <div class="text-[#1C1C1E] font-semibold text-[18px] bg-white bg-[68%] px-4 py-10 rounded-[30px]"
+                        style="font-family: 'Sora', sans-serif;">
+                        <p>Rumors are right. Millennials and Genzers are going to take Sensex to 200k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- banner ends here -->
+
+        <!-- mission starts here -->
+
+        <div class="bg-white">
+            <div class="max-w-screen-xl md:mx-auto text-center py-20 mx-[5%] px-20">
+                <h2 class="text-[32px] font-semibold text-[#1C1C1E] md:mx-[20%]"
+                    style="font-family: 'Sora', sans-serif;">Mission to
+                    make India smarter, happier, and richer</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+                    <div class="flex justify-start bg-[#F0DCFC] items-center px-8 py-6 gap-4 mt-16 rounded-[15px]">
+                        <div>
+                            <img src="./Images/Group 80.png" alt="">
+                        </div>
+                        <p class="text-left font-light text-[16px] text-[#1C1C1E]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <span class="font-semibold text-[20px]" style="font-family: 'Sora', sans-serif;">Innovative
+                            </span> <br>
+                            Upping for +1 solution
+                        </p>
+                    </div>
+                    <div class="flex justify-start bg-[#DCEEFD] items-center px-8 py-6 gap-4 mt-16 rounded-[15px]">
+                        <div>
+                            <img src="./Images/Group 79.png" alt="">
+                        </div>
+                        <p class="text-left font-light text-[16px] text-[#1C1C1E]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <span class="font-semibold text-[20px]" style="font-family: 'Sora', sans-serif;">Honest
+                            </span> <br>
+                            Transparent in every sense
+                        </p>
+                    </div>
+                    <div class="flex justify-start bg-[#FCEEDC] items-center px-8 py-6 gap-4 mt-16 rounded-[15px]">
+                        <div>
+                            <img src="./Images/Group 77.png" alt="">
+                        </div>
+                        <p class="text-left font-light text-[16px] text-[#1C1C1E]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <span class="font-semibold text-[20px]" style="font-family: 'Sora', sans-serif;">Competitive
+                            </span> <br>
+                            Play hard to win big
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- mission ends here -->
+
+
+
+            <!-- experience starts here -->
+
+            <div class="bg-[#1C1C1E]">
+                <div class="max-w-screen-xl md:mx-auto text-center py-20 mx-[5%] flex gap-10"
+                    style="font-family: 'Inter', sans-serif;">
+                    <div class="w-[50%]">
+                        <img src="./Images/Group 81.png" alt="">
+                    </div>
+                    <div class="flex flex-col gap-2 lg:mx-[10%] w-[50%]">
+                        <h2 class="text-left text-[32px] text-white font-semibold  "
+                            style="font-family: 'Sora', sans-serif;"> <span class="bg-gradient-to-b from-[#62B8FF]  to-[#77F0E4]
+                         bg-clip-text text-transparent">Experienced experts </span><br><span class="bg-gradient-to-b from-[#C578E3]  to-[#EDA146]
+                         bg-clip-text text-transparent">on-hand</span></h2>
+                        <p class="text-left text-white text-[20px] font-semibold pb-6"
+                            style="font-family: 'Sora', sans-serif;">Where technology meets finance is our
+                            headquarter, Mumbai. Meet 3-pillars:</p>
+                        <p class="text-[#AAAAAA] text-[18px] text-left">Amit - Founder and Chief Investment Officer</p>
+                        <p class="text-[#AAAAAA] text-[18px] text-left">Rupesh - Chief technology Officer</p>
+                        <p class="text-[#AAAAAA] text-[18px] text-left">Shubham - Principal Research Analyst</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- experience ends here -->
+
+            <!-- ethics starts here -->
+
+            <div>
+                <div class="max-w-screen-xl md:mx-auto text-center py-20 mx-[5%] px-20"
+                    style="font-family: 'Inter', sans-serif;">
+                    <h2 class="text-[32px] font-semibold text-[#1C1C1E]" style="font-family: 'Sora', sans-serif;">Brand
+                        Ethics</h2>
+                    <p class="text-[24px] text-[#898989]">These are the brand ethics that we firmly stand by</p>
+                    <div class="w-full gap-4 mt-20 grid grid-cols-1 md:grid-cols-3 text-center">
+
+                        <!-- Stat 1 -->
+                        <div
+                            class="flex flex-col gap-3 items-center justify-center py-4 border-b border-[#6DBDFF] md:border-b-0 md:border-r md:border-[#6DBDFF]">
+                            <h2 class=" text-[20px] font-semibold text-[#1C1C1E]"
+                                style="font-family: 'Sora', sans-serif;">Safety</h2>
+                            <p class=" text-[#898989] text-[18px] ">Your data is safe with us. Say no to trust issues.
+                            </p>
+                        </div>
+
+                        <!-- Stat 2 -->
+                        <div
+                            class="flex flex-col gap-3 items-center justify-center py-4 border-b border-[#6DBDFF] md:border-b-0 md:border-r md:border-[#6DBDFF]">
+                            <h2 class=" text-[20px] font-semibold text-[#1C1C1E]"
+                                style="font-family: 'Sora', sans-serif;">Transparency</h2>
+                            <p class=" text-[#898989] text-[18px] ">Upfront and clear in our relationship with your data
+                                and context</p>
+                        </div>
+
+                        <!-- Stat 3 -->
+                        <div class="flex flex-col gap-3 items-center justify-center py-4 ">
+                            <h2 class=" text-[20px] font-semibold text-[#1C1C1E]"
+                                style="font-family: 'Sora', sans-serif;">Super easy</h2>
+                            <p class=" text-[#898989] text-[18px] ">Ridiculously simple and intuitive, sans financial
+                                jargons </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Starts here -->
+
+                <div class="bg-[#1C1C1E]">
+                    <div
+                        class="max-w-screen-xl  mx-auto flex pt-12 w-[100%] flex-col md:flex-row  justify-center items-center md:items-start">
+                        <div class="flex flex-col gap-2 justify-center items-center md:items-start md:w-[60%]"
+                            style="font-family: 'Inter', sans-serif;">
+                            <div class="flex w-20 h-20">
+                                <img src="./Images/logo.png" alt="logo">
+                            </div>
+                            <p class="text-[#AAAAAA] mx-[5%] md:mx-0 text-center md:text-left md:w-[60%]"
+                                style="font-family: 'Sora', sans-serif;">Lorem Ipsum is simply
+                                dummy text of
+                                the
+                                printing and typesetting
+                                industry.</p><br><br>
+                            <p class="text-[#AAAAAA]">Download the app :</p>
+                            <div class="flex gap-4">
+                                <div class="w-32 h-16"><img src="./Images/googleplay.png" alt="googleplay"></div>
+                                <div class="w-32 h-16"><img src="./Images/appstore.png" alt="appstore"></div>
+                            </div>
+                        </div>
+                        <div class=" md:w-[40%] flex flex-col gap-[75px]">
+                            <div class="flex justify-center md:justify-start gap-24 ">
+
+                                <ul class="text-[#AAAAAA] flex flex-col gap-2"
+                                    style="font-family: 'Inter', sans-serif;">
+                                    <p class="text-white font-semibold text-[20px] pb-2">Quick Links</p>
+                                    <a href="#">
+                                        <li>About Us</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Products</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Blogs</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Community</li>
+                                    </a>
+                                </ul>
+                                <ul class="text-[#AAAAAA] flex flex-col gap-2"
+                                    style="font-family: 'Inter', sans-serif;">
+                                    <p class="text-white font-semibold text-[20px] pb-2">Follow Us :</p>
+                                    <a href="#">
+                                        <li class="flex gap-1"><img src="./Images/mdi_instagram.png" alt="">Instagram
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li class="flex gap-1"><img src="./Images/akar-icons_linkedin-fill.png"
+                                                alt="">Linkedin
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li class="flex gap-1"><img src="./Images/prime_twitter.png" alt="">Twitter</li>
+                                    </a>
+                                </ul>
+                            </div>
+                            <p class="text-[#AAAAAA] pb-2 md:pb-0" style="font-family: 'Inter', sans-serif;">SEBI
+                                Registered
+                                Research Analyst - INH000010876</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer ends here -->
+
+                <!-- Copyright start here -->
+
+                <div class="bg-black py-4">
+                    <div
+                        class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-start gap-3 md:gap-0 md:justify-between ">
+                        <p class="text-[#AAAAAA]" style="font-family: 'Sora', sans-serif;">2022 Waya Financial
+                            Technologies Pvt
+                            Ltd</p>
+                        <ul class="text-[#AAAAAA] flex gap-8" style="font-family: 'Inter', sans-serif;">
+                            <a href="#">
+                                <li>Terms & Conditions</li>
+                            </a>
+                            <a href="#">
+                                <li>Privacy Policy</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const menuBtn = document.getElementById("mobile-menu-button");
+                const mobileMenu = document.getElementById("mobile-menu");
+
+                menuBtn.addEventListener("click", () => {
+                    mobileMenu.classList.toggle("hidden");
+
+                    // toggle icon ☰ <-> ✖
+                    if (mobileMenu.classList.contains("hidden")) {
+                        menuBtn.textContent = "☰";
+                    } else {
+                        menuBtn.textContent = "✖";
+                    }
+                });
+            </script>
+
+</body>
+
+</html>
