@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./Images/logo.png" type="image/x-icon">
+    <title>TheWaya</title>
+</head>
+
+<body>
+
+    <div class="bg-[#1C1C1E]">
+        <!-- nabvar starts here -->
+
+        <div class="bg-[#1C1C1E] sticky top-0 z-20">
+            <div class="max-w-screen-xl md:mx-auto flex justify-between items-center py-4 mx-[5%]"
+                style="font-family: 'Inter', sans-serif;">
+
+                <!-- Logo -->
+                <div class="flex w-16 h-16 md:w-20 md:h-20">
+                    <a href="./index.html">
+                        <img src="./Images/logo.png" alt="Logo">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex gap-14 items-center">
+                    <ul class="flex gap-16 text-white text-[18px]">
+                        <li><a href="./aboutus.html" class="hover:text-gray-400 transition">About Us</a></li>
+                        <li><a href="./index.html" class="hover:text-gray-400 transition">Products</a></li>
+                        <li><a href="./blog.html" class="hover:text-gray-400 transition">Blogs</a></li>
+                        <li><a href="#" class="hover:text-gray-400 transition">Community</a></li>
+                    </ul>
+                    <div>
+                        <a href="contactus.html"
+                            class="mt-2 w-3/4 mx-auto border-white border-[2px] px-8 py-3 rounded-3xl text-white hover:bg-white hover:text-black transition cursor-pointer">
+                            Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white text-3xl focus:outline-none">
+                        ☰
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden w-full absolute left-0 right-0 bg-[#2C2C2E] shadow-lg z-10">
+                <ul class="flex flex-col text-white text-center py-4 space-y-3"
+                    style="font-family: 'Inter', sans-serif;">
+                    <li><a href="./aboutus.html" class="block py-2 hover:bg-[#3C3C3E] transition">About Us</a></li>
+                    <li><a href="./index.html" class="block py-2 hover:bg-[#3C3C3E] transition">Products</a></li>
+                    <li><a href="./blog.html" class="block py-2 hover:bg-[#3C3C3E] transition">Blogs</a></li>
+                    <li><a href="#" class="block py-2 hover:bg-[#3C3C3E] transition">Community</a></li>
+                    <li>
+                        <div class="pt-2">
+                            <a href="contactus.html"
+                                class="mt-2 w-3/4 mx-auto border-white border-[2px] px-8 py-2 rounded-3xl text-white hover:bg-white hover:text-black transition cursor-pointer">
+                                Contact Us</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- nabvar ends here -->
+
+        <!-- blogs starts here -->
+        <div>
+            <div  class="max-w-screen-xl  md:mx-auto   py-10 flex flex-col gap-12  ">
+                <div class="flex flex-col gap-3" style="font-family: 'Inter', sans-serif;">
+                    <h2 class="font-semibold text-white text-center text-5xl" style="font-family: 'Sora', sans-serif;">
+                        Our Blog
+                    </h2>
+
+                </div>
+                <div class="max-w-screen-xl   grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3   md:gap-4  text-[#1C1C1E] "
+                    style="font-family: 'Inter', sans-serif;">
+                    <div class=" bg-[#6DBDFF];">
+
+                        <div
+                            class="relative rounded-xl p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
+                            <div class="rounded-xl flex flex-col gap-3 py-3 px-3 md:px-0 bg-[#1C1C1E]">
+                                <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
+                                        alt="register">
+                                </div>
+                                <h4 class="font-bold text-white text-2xl text-center mt-2"
+                                    style="font-family: 'Sora', sans-serif;">
+                                    Post 1 Headline</h4>
+                                <p class=" text-center text-[18px] text-white mx-5">Sample small text. Lorem ipsum dolor
+                                    sit amet</p>
+                                <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-5">Friday 3-10-2025</p>
+                                <a href="#"
+                                    class="absolute left-1/2 -bottom-4 transform -translate-x-1/2 bg-black border-2 border-[#C578E3] rounded-full px-6 py-2 text-white hover:bg-[#C578E3] transition">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                            class="relative rounded-xl p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
+                            <div class="rounded-xl flex flex-col gap-3 py-3 px-3 md:px-0 bg-[#1C1C1E]">
+                                <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
+                                        alt="register">
+                                </div>
+                                <h4 class="font-bold text-white text-2xl text-center mt-2"
+                                    style="font-family: 'Sora', sans-serif;">
+                                    Post 2 Headline</h4>
+                                <p class=" text-center text-[18px] text-white mx-5">Sample small text. Lorem ipsum dolor
+                                    sit amet</p>
+                                <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-5">Friday 3-10-2025</p>
+                                <a href="#"
+                                    class="absolute left-1/2 -bottom-4 transform -translate-x-1/2 bg-black border-2 border-[#C578E3] rounded-full px-6 py-2 text-white hover:bg-[#C578E3] transition">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    <div
+                            class="relative rounded-xl p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
+                            <div class="rounded-xl flex flex-col gap-3 py-3 px-3 md:px-0 bg-[#1C1C1E]">
+                                <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
+                                        alt="register">
+                                </div>
+                                <h4 class="font-bold text-white text-2xl text-center mt-2"
+                                    style="font-family: 'Sora', sans-serif;">
+                                    Post 3 Headline</h4>
+                                <p class=" text-center text-[18px] text-white mx-5">Sample small text. Lorem ipsum dolor
+                                    sit amet</p>
+                                <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-5">Friday 3-10-2025</p>
+                                <a href="#"
+                                    class="absolute left-1/2 -bottom-4 transform -translate-x-1/2 bg-black border-2 border-[#C578E3] rounded-full px-6 py-2 text-white hover:bg-[#C578E3] transition">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    <div
+                            class="relative rounded-xl p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
+                            <div class="rounded-xl flex flex-col gap-3 py-3 px-3 md:px-0 bg-[#1C1C1E]">
+                                <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
+                                        alt="register">
+                                </div>
+                                <h4 class="font-bold text-white text-2xl text-center mt-2"
+                                    style="font-family: 'Sora', sans-serif;">
+                                    Post 1 Headline</h4>
+                                <p class=" text-center text-[18px] text-white mx-5">Sample small text. Lorem ipsum dolor
+                                    sit amet</p>
+                                <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-5">Friday 3-10-2025</p>
+                                <a href="#"
+                                    class="absolute left-1/2 -bottom-4 transform -translate-x-1/2 bg-black border-2 border-[#C578E3] rounded-full px-6 py-2 text-white hover:bg-[#C578E3] transition">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    <div
+                            class="relative rounded-xl p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
+                            <div class="rounded-xl flex flex-col gap-3 py-3 px-3 md:px-0 bg-[#1C1C1E]">
+                                <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
+                                        alt="register">
+                                </div>
+                                <h4 class="font-bold text-white text-2xl text-center mt-2"
+                                    style="font-family: 'Sora', sans-serif;">
+                                    Post 2 Headline</h4>
+                                <p class=" text-center text-[18px] text-white mx-5">Sample small text. Lorem ipsum dolor
+                                    sit amet</p>
+                                <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-5">Friday 3-10-2025</p>
+                                <a href="#"
+                                    class="absolute left-1/2 -bottom-4 transform -translate-x-1/2 bg-black border-2 border-[#C578E3] rounded-full px-6 py-2 text-white hover:bg-[#C578E3] transition">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    <div
+                            class="relative rounded-xl p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
+                            <div class="rounded-xl flex flex-col gap-3 py-3 px-3 md:px-0 bg-[#1C1C1E]">
+                                <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
+                                        alt="register">
+                                </div>
+                                <h4 class="font-bold text-white text-2xl text-center mt-2"
+                                    style="font-family: 'Sora', sans-serif;">
+                                    Post 3 Headline</h4>
+                                <p class=" text-center text-[18px] text-white mx-5">Sample small text. Lorem ipsum dolor
+                                    sit amet</p>
+                                <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-5">Friday 3-10-2025</p>
+                                <a href="#"
+                                    class="absolute left-1/2 -bottom-4 transform -translate-x-1/2 bg-black border-2 border-[#C578E3] rounded-full px-6 py-2 text-white hover:bg-[#C578E3] transition">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- blogs ends here -->
+
+        <!-- Footer Starts here -->
+
+        <div>
+            <div
+                class="max-w-screen-xl  mx-auto flex pt-12 w-[100%] flex-col md:flex-row  justify-center items-center md:items-start">
+                <div class="flex flex-col gap-2 justify-center items-center md:items-start md:w-[60%]"
+                    style="font-family: 'Inter', sans-serif;">
+                    <div class="flex w-20 h-20">
+                        <img src="./Images/logo.png" alt="logo">
+                    </div>
+                    <p class="text-[#AAAAAA] mx-[5%] md:mx-0 text-center md:text-left md:w-[60%]"
+                        style="font-family: 'Sora', sans-serif;">Lorem Ipsum is simply
+                        dummy text of
+                        the
+                        printing and typesetting
+                        industry.</p><br><br>
+                    <p class="text-[#AAAAAA]">Download the app :</p>
+                    <div class="flex gap-4">
+                        <div class="w-32 h-16"><img src="./Images/googleplay.png" alt="googleplay"></div>
+                        <div class="w-32 h-16"><img src="./Images/appstore.png" alt="appstore"></div>
+                    </div>
+                </div>
+                <div class=" md:w-[40%] flex flex-col gap-[75px]">
+                    <div class="flex justify-center md:justify-start gap-24 ">
+
+                        <ul class="text-[#AAAAAA] flex flex-col gap-2" style="font-family: 'Inter', sans-serif;">
+                            <p class="text-white font-semibold text-[20px] pb-2">Quick Links</p>
+                            <a href="./aboutus.html">
+                                <li>About Us</li>
+                            </a>
+                            <a href="./index.html">
+                                <li>Products</li>
+                            </a>
+                            <a href="./blog.html">
+                                <li>Blogs</li>
+                            </a>
+                            <a href="#">
+                                <li>Community</li>
+                            </a>
+                        </ul>
+                        <ul class="text-[#AAAAAA] flex flex-col gap-2" style="font-family: 'Inter', sans-serif;">
+                            <p class="text-white font-semibold text-[20px] pb-2">Follow Us :</p>
+                            <a href="#">
+                                <li class="flex gap-1"><img src="./Images/mdi_instagram.png" alt="">Instagram</li>
+                            </a>
+                            <a href="#">
+                                <li class="flex gap-1"><img src="./Images/akar-icons_linkedin-fill.png" alt="">Linkedin
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li class="flex gap-1"><img src="./Images/prime_twitter.png" alt="">Twitter</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <p class="text-[#AAAAAA] pb-2 md:pb-0 md:mx-0 mx-[9%]" style="font-family: 'Inter', sans-serif;">
+                        SEBI Registered
+                        Research Analyst - INH000010876</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer ends here -->
+
+        <!-- Copyright start here -->
+
+        <div class="bg-black py-4">
+            <div
+                class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-start gap-3 md:gap-0 md:justify-between ">
+                <p class="text-[#AAAAAA]" style="font-family: 'Sora', sans-serif;">2022 Waya Financial Technologies
+                    Pvt
+                    Ltd</p>
+                <ul class="text-[#AAAAAA] flex gap-8" style="font-family: 'Inter', sans-serif;">
+                    <a href="#">
+                        <li>Terms & Conditions</li>
+                    </a>
+                    <a href="#">
+                        <li>Privacy Policy</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+
+            // toggle icon ☰ <-> ✖
+            if (mobileMenu.classList.contains("hidden")) {
+                menuBtn.textContent = "☰";
+            } else {
+                menuBtn.textContent = "✖";
+            }
+        });
+    </script>
+</body>
+
+</html>
