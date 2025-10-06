@@ -34,7 +34,54 @@
                 <div class="hidden lg:flex gap-14 items-center">
                     <ul class="flex gap-16 text-white text-[18px]">
                         <li><a href="./aboutus.html" class="hover:text-gray-400 transition">About Us</a></li>
-                        <li><a href="#productsfour" class="hover:text-gray-400 transition">Products</a></li>
+                        <li x-data="{ open: false, isDesktop: window.innerWidth >= 768 }"
+                            x-init="window.addEventListener('resize', () => { isDesktop = window.innerWidth >= 768 })"
+                            class="relative" @click.away="open = false">
+
+                            <!-- Products Link -->
+                            <a href="#productsfour" @click.prevent="open = !open"
+                                @mouseenter="if (isDesktop && !open) open = true"
+                                @mouseleave="if (isDesktop && !clicked) open = false"
+                                class="hover:text-gray-400 transition inline-flex items-center font-medium">
+                                Products
+                            </a>
+
+                            <!-- Dropdown Menu -->
+                            <div x-show="open" x-transition
+                                class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 flex bg-gray-100 shadow-lg rounded-md z-50 divide-x divide-gray-300">
+
+                                <!-- Card 1 -->
+                                <a href="#product1"
+                                    class="flex flex-col px-6 py-4 text-[#1C1C1E] hover:bg-gray-200 min-w-[160px]">
+                                    <span class="font-semibold">Waya Equity</span>
+                                    <p class="text-sm text-gray-600">For Investors</p>
+                                </a>
+
+                                <!-- Card 2 -->
+                                <a href="#product2"
+                                    class="flex flex-col px-6 py-4 text-[#1C1C1E] hover:bg-gray-200 min-w-[160px]">
+                                    <span class="font-semibold">Waya FnO</span>
+                                    <p class="text-sm text-gray-600">For Risk Takers</p>
+                                </a>
+
+                                <!-- Card 3 -->
+                                <a href="#product3"
+                                    class="flex flex-col px-6 py-4 text-[#1C1C1E] hover:bg-gray-200 min-w-[160px]">
+                                    <span class="font-semibold">Waya MCX</span>
+                                    <p class="text-sm text-gray-600">Commodity Market</p>
+                                </a>
+
+                                <!-- Card 4 -->
+                                <a href="#product4"
+                                    class="flex flex-col px-6 py-4 text-[#1C1C1E] hover:bg-gray-200 min-w-[160px]">
+                                    <span class="font-semibold">Waya PMS</span>
+                                    <p class="text-sm text-gray-600">We manage your Portfolio</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
                         <li><a href="./blog.html" class="hover:text-gray-400 transition">Blogs</a></li>
                         <li><a href="./community.html" class="hover:text-gray-400 transition">Community</a></li>
                     </ul>
@@ -54,434 +101,477 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden lg:hidden w-full absolute left-0 right-0 bg-[#2C2C2E] shadow-lg z-10">
+            <div id="mobile-menu" class="hidden lg:hidden w-full absolute left-0 right-0 bg-[#2C2C2E] shadow-lg z-10"
+                x-data="{ productsOpen: false }">
+
                 <ul class="flex flex-col text-white text-center py-4 space-y-3"
                     style="font-family: 'Inter', sans-serif;">
                     <li><a href="./aboutus.html" class="block py-2 hover:bg-[#3C3C3E] transition">About Us</a></li>
-                    <li><a href="#productsfour" class="block py-2 hover:bg-[#3C3C3E] transition">Products</a></li>
+
+                    <!-- Mobile Products Dropdown -->
+                    <li class="relative">
+                        <button @click="productsOpen = !productsOpen"
+                            class="w-full text-center block py-2 hover:bg-[#3C3C3E] transition px-4">
+                            Products
+                        </button>
+
+                        <!-- Dropdown Items -->
+                        <div x-show="productsOpen" x-transition
+                            class="flex flex-col bg-[#3C3C3E] mt-1 rounded-md overflow-hidden">
+                            <a href="#product1" class="block px-6 py-2 hover:bg-[#4C4C4E]">Waya Equity</a>
+                            <a href="#product2" class="block px-6 py-2 hover:bg-[#4C4C4E]">Waya FnO</a>
+                            <a href="#product3" class="block px-6 py-2 hover:bg-[#4C4C4E]">Waya MCX</a>
+                            <a href="#product4" class="block px-6 py-2 hover:bg-[#4C4C4E]">Waya PMS</a>
+                        </div>
+                    </li>
+
                     <li><a href="./blog.html" class="block py-2 hover:bg-[#3C3C3E] transition">Blogs</a></li>
                     <li><a href="./community.html" class="block py-2 hover:bg-[#3C3C3E] transition">Community</a></li>
                     <li>
                         <div class="pt-2">
                             <a href="contactus.html"
                                 class="mt-2 w-3/4 mx-auto border-white border-[2px] px-8 py-2 rounded-3xl text-white hover:bg-white hover:text-black transition cursor-pointer">
-                                Contact Us</a>
+                                Contact Us
+                            </a>
                         </div>
                     </li>
                 </ul>
             </div>
-        </div>
 
-        <!-- nabvar ends here -->
+            <!-- nabvar ends here -->
 
-        <!-- banner starts here -->
+            <!-- banner starts here -->
 
-        <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between md:px-20  gap-10 text-center md:text-left text-white py-10 "
-            style="font-family: 'Inter', sans-serif;">
+            <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between md:px-20  gap-10 text-center md:text-left text-white py-10 "
+                style="font-family: 'Inter', sans-serif;">
 
-            <div class=" flex flex-col gap-2 justify-center ">
-                <p class="text-[#EDA146] font-semibold text-lg md:text-[20px]">WE TELL YOU</p>
-                <h1 class="font-semibold text-4xl  sm:text-5xl text-white leading-tight"
-                    style="font-family: 'Sora', sans-serif;">
-                    When to <span class="text-[#c975e0]">Buy</span> <br>
-                    When to <span class="text-[#6fbffd]">Exit</span>
-                </h1>
-                <p class="text-[#AAAAAA] text-lg md:text-2xl">Over fundamentally strong companies</p>
-                <div class="mt-12">
-                    <a href="https://thewaya.com/signup" target="_blank"
-                        class="border-white border-[2px] px-8 py-3 rounded-full text-black bg-white  duration-300 cursor-pointer">
-                        Register For Free</a>
+                <div class=" flex flex-col gap-2 justify-center ">
+                    <p class="text-[#EDA146] font-semibold text-lg md:text-[20px]">WE TELL YOU</p>
+                    <h1 class="font-semibold text-4xl  sm:text-5xl text-white leading-tight"
+                        style="font-family: 'Sora', sans-serif;">
+                        When to <span class="text-[#c975e0]">Buy</span> <br>
+                        When to <span class="text-[#6fbffd]">Exit</span>
+                    </h1>
+                    <p class="text-[#AAAAAA] text-lg md:text-2xl">Over fundamentally strong companies</p>
+                    <div class="mt-12">
+                        <a href="https://thewaya.com/signup" target="_blank"
+                            class="border-white border-[2px] px-8 py-3 rounded-full text-black bg-white  duration-300 cursor-pointer">
+                            Register For Free</a>
+                    </div>
+                </div>
+                <div class=" flex justify-center items-center">
+                    <img src="./Images/banner.png" alt="Banner" class="w-80 md:w-96">
                 </div>
             </div>
-            <div class=" flex justify-center items-center">
-                <img src="./Images/banner.png" alt="Banner" class="w-80 md:w-96">
-            </div>
-        </div>
-        <div
-            class=" max-w-screen-xl md:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center mx-[5%] gap-6 py-16">
+            <div
+                class=" max-w-screen-xl md:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center mx-[5%] gap-6 py-16">
 
-            <div class="rounded-xl p-[2px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
-                <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
-                    <div><img src="./Images/tabler_users.png" alt="user"></div>
-                    <p class="text-white font-medium mt-2 text-[18px]" style="font-family: 'Sora', sans-serif;">10 Lakh
-                        + users</p>
+                <div class="rounded-xl p-[2px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
+                    <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                        <div><img src="./Images/tabler_users.png" alt="user"></div>
+                        <p class="text-white font-medium mt-2 text-[18px]" style="font-family: 'Sora', sans-serif;">10
+                            Lakh
+                            + users</p>
+                    </div>
                 </div>
+
+                <div class="rounded-xl p-[2px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
+                    <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                        <div><img src="./Images/mdi_register-outline.png" alt="register"></div>
+                        <p class="text-white font-semibold mt-2 text-[18px]" style="font-family: 'Sora', sans-serif;">
+                            SEBI
+                            Registered RA <br># PMS #</p>
+                    </div>
+                </div>
+
+                <div class="rounded-xl p-[2px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
+                    <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                        <div><img src="./Images/ant-design_stock-outlined.png" alt="graph"></div>
+                        <p class="text-white font-semibold mt-2 text-[18px]" style="font-family: 'Sora', sans-serif;">
+                            AUA:
+                            400 Crores</p>
+                    </div>
+                </div>
+
+                <div class="rounded-xl p-[2px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
+                    <div
+                        class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full border-2 border-gr">
+                        <div><img src="./Images/iwwa_year.png" alt="calender"></div>
+                        <p class="text-white font-semibold mt-2 text-[18px]" style="font-family: 'Sora', sans-serif;">
+                            Experience: 25 Years</p>
+
+
+                    </div>
+                </div>
+
             </div>
 
-            <div class="rounded-xl p-[2px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
-                <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
-                    <div><img src="./Images/mdi_register-outline.png" alt="register"></div>
-                    <p class="text-white font-semibold mt-2 text-[18px]" style="font-family: 'Sora', sans-serif;">SEBI
-                        Registered RA <br># PMS #</p>
-                </div>
-            </div>
-
-            <div class="rounded-xl p-[2px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
-                <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
-                    <div><img src="./Images/ant-design_stock-outlined.png" alt="graph"></div>
-                    <p class="text-white font-semibold mt-2 text-[18px]" style="font-family: 'Sora', sans-serif;">AUA:
-                        400 Crores</p>
-                </div>
-            </div>
-
-            <div class="rounded-xl p-[2px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A]">
-                <div
-                    class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full border-2 border-gr">
-                    <div><img src="./Images/iwwa_year.png" alt="calender"></div>
-                    <p class="text-white font-semibold mt-2 text-[18px]" style="font-family: 'Sora', sans-serif;">
-                        Experience: 25 Years</p>
+            <!-- banner starts here -->
 
 
-                </div>
-            </div>
+            <!-- products starts here -->
 
-        </div>
+            <div class="bg-white">
+                <div id="productsfour"
+                    class="max-w-screen-xl  md:mx-auto   py-10 flex flex-col gap-12 -z-10 bg-no-repeat bg-center bg-cover"
+                    style="background-image: url('./Images/Group 41.svg');">
+                    <div class="flex flex-col gap-3" style="font-family: 'Inter', sans-serif;">
+                        <h2 class="font-semibold text-center text-4xl" style="font-family: 'Sora', sans-serif;">Waya
+                            Products</h2>
+                        <p class="text-[#898989] text-center mx-[5%] md:mx-[17%] text-[24px]">Comprehensive financial
+                            services designed
+                            to
+                            maximize
+                            your
+                            investment potential across all market
+                            segments</p>
+                    </div>
+                    <div class="max-w-screen-xl   grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mx-4 md:mx-52   text-[#1C1C1E] "
+                        style="font-family: 'Inter', sans-serif;">
+                        <div class=" bg-[#6DBDFF];">
 
-        <!-- banner starts here -->
+                            <div
+                                class="rounded-xl p-5 md:p-10 shadow-[0px_22px_33px_#00000012]  bg-white hover:shadow-[0px_0px_20px_8px_rgba(0,0,0,0.4)] duration-300 hover:shadow-[#dccff3] mx-6 my-4 flex flex-col gap-4 ">
 
+                                <div class="flex justify-center text-center"><img src="./Images/Group 25 (2).png"
+                                        alt="register">
+                                </div>
+                                <h4 class="font-bold text-2xl text-center mt-2"
+                                    style="font-family: 'Sora', sans-serif;">
+                                    Waya Equity</h4>
+                                <p class=" text-justify text-[18px]">Expert equity recommendations and stock analysis
+                                    for
+                                    maximizing your
+                                    investment returns</p>
+                                <ul class="text-left list-disc mx-5 text-[18px]">
+                                    <li class="list-disc">Short Term Recommendations</li>
+                                    <li>Multibagger Recommendations</li>
+                                    <li>Monthly and Weekly Byte</li>
+                                </ul>
+                                <div class="mt-2 text-center ">
+                                    <a href="./waya-equity.html"
+                                        class=" px-8 py-2 rounded-3xl underline cursor-pointer text-[18px]"
+                                        target="_blank">Know More
+                                    </a>
 
-        <!-- products starts here -->
-
-        <div class="bg-white">
-            <div id="productsfour"
-                class="max-w-screen-xl  md:mx-auto   py-10 flex flex-col gap-12 -z-10 bg-no-repeat bg-center bg-cover"
-                style="background-image: url('./Images/Group 41.svg');">
-                <div class="flex flex-col gap-3" style="font-family: 'Inter', sans-serif;">
-                    <h2 class="font-semibold text-center text-4xl" style="font-family: 'Sora', sans-serif;">Waya
-                        Products</h2>
-                    <p class="text-[#898989] text-center mx-[5%] md:mx-[17%] text-[24px]">Comprehensive financial
-                        services designed
-                        to
-                        maximize
-                        your
-                        investment potential across all market
-                        segments</p>
-                </div>
-                <div class="max-w-screen-xl   grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mx-4 md:mx-52   text-[#1C1C1E] "
-                    style="font-family: 'Inter', sans-serif;">
-                    <div class=" bg-[#6DBDFF];">
-
+                                </div>
+                            </div>
+                        </div>
                         <div
-                            class="rounded-xl p-5 md:p-10 shadow-[0px_22px_33px_#00000012]  bg-white hover:shadow-[0px_0px_20px_8px_rgba(0,0,0,0.4)] duration-300 hover:shadow-[#dccff3] mx-6 my-4 flex flex-col gap-4 ">
-
-                            <div class="flex justify-center text-center"><img src="./Images/Group 25 (2).png"
+                            class="rounded-xl p-5 md:p-10 shadow-[0px_22px_33px_#00000012] hover:shadow-[0px_0px_20px_8px_rgba(0,0,0,0.4)] duration-300 bg-white hover:shadow-[#dccff3] mx-6 my-4 flex flex-col gap-4">
+                            <div class="flex justify-center text-center"><img src="./Images/Group 24 (1).png"
                                     alt="register">
                             </div>
                             <h4 class="font-bold text-2xl text-center mt-2" style="font-family: 'Sora', sans-serif;">
-                                Waya Equity</h4>
-                            <p class=" text-justify text-[18px]">Expert equity recommendations and stock analysis for
-                                maximizing your
-                                investment returns</p>
+                                Waya
+                                FnO</h4>
+                            <p class="text-justify text-[18px] tracking-tight">Advanced Futures and Options strategies
+                                for
+                                sophisticated trading
+                                opportunities</p>
                             <ul class="text-left list-disc mx-5 text-[18px]">
-                                <li class="list-disc">Short Term Recommendations</li>
-                                <li>Multibagger Recommendations</li>
-                                <li>Monthly and Weekly Byte</li>
+                                <li class="list-disc">Index and Stock Option calls</li>
+                                <li>Hero-Zero Calls</li>
+                                <li>Interdaya and BTST calls</li>
                             </ul>
-                            <div class="mt-2 text-center ">
-                                <a href="./waya-equity.html"
+                            <div class="mt-2 text-center">
+                                <a href="./waya-fno.html"
                                     class=" px-8 py-2 rounded-3xl underline cursor-pointer text-[18px]"
-                                    target="_blank">Know More
+                                    target="_blank">Know
+                                    More
                                 </a>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-xl p-5 md:p-10 shadow-[0px_22px_33px_#00000012] hover:shadow-[0px_0px_20px_8px_rgba(0,0,0,0.4)] duration-300 bg-white hover:shadow-[#dccff3] mx-6 my-4 flex flex-col gap-4">
+                            <div class="flex justify-center text-center"><img src="./Images/Group 26 (3).png"
+                                    alt="register">
+                            </div>
+                            <h4 class="font-bold text-2xl text-center mt-2" style="font-family: 'Sora', sans-serif;">
+                                Waya
+                                MCX</h4>
+                            <p class=" text-justify text-[18px] tracking-tighter">Gold , Oil , Silver and Other
+                                Commodities
+                            </p>
+                            <ul class="text-left list-disc mx-5 text-[18px]">
+                                <li class="list-disc">Intraday and BTST Recommendations</li>
+                                <li>Options and Futures</li>
+                            </ul>
+                            <div class="mt-2 text-center">
+                                <button class="  px-8 py-2 rounded-3xl underline cursor-pointer text-[18px]">
+                                    Know More</button>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-xl p-5 md:p-10 shadow-[0px_22px_33px_#00000012] hover:shadow-[0px_0px_20px_8px_rgba(0,0,0,0.4)] bg-white hover:shadow-[#dccff3] duration-300 mx-6 my-4 flex flex-col gap-4">
+                            <div class="flex justify-center text-center"><img src="./Images/Group 27.png"
+                                    alt="register">
+                            </div>
+                            <h4 class="font-bold text-2xl text-center mt-2" style="font-family: 'Sora', sans-serif;">
+                                Waya
+                                PMS</h4>
+                            <p class=" text-justify text-[18px] tracking-tighter">Ranked : 3 according to PMS bazaar</p>
+                            <ul class="text-left list-disc mx-5 text-[18px]">
+                                <li class="list-disc">Aspiration for 1000% in 7 years</li>
+                                <li>Category : Small Cap</li>
 
+                            </ul>
+                            <div class="mt-2 text-center">
+                                <button class="  px-8 py-2 rounded-3xl underline cursor-pointer text-[18px]">
+                                    Know More</button>
                             </div>
                         </div>
                     </div>
-                    <div
-                        class="rounded-xl p-5 md:p-10 shadow-[0px_22px_33px_#00000012] hover:shadow-[0px_0px_20px_8px_rgba(0,0,0,0.4)] duration-300 bg-white hover:shadow-[#dccff3] mx-6 my-4 flex flex-col gap-4">
-                        <div class="flex justify-center text-center"><img src="./Images/Group 24 (1).png"
-                                alt="register">
-                        </div>
-                        <h4 class="font-bold text-2xl text-center mt-2" style="font-family: 'Sora', sans-serif;">Waya
-                            FnO</h4>
-                        <p class="text-justify text-[18px] tracking-tight">Advanced Futures and Options strategies for
-                            sophisticated trading
-                            opportunities</p>
-                        <ul class="text-left list-disc mx-5 text-[18px]">
-                            <li class="list-disc">Index and Stock Option calls</li>
-                            <li>Hero-Zero Calls</li>
-                            <li>Interdaya and BTST calls</li>
-                        </ul>
-                        <div class="mt-2 text-center">
-                            <a href="./waya-fno.html"
-                                class=" px-8 py-2 rounded-3xl underline cursor-pointer text-[18px]" target="_blank">Know
-                                More
-                            </a>
-                        </div>
-                    </div>
-                    <div
-                        class="rounded-xl p-5 md:p-10 shadow-[0px_22px_33px_#00000012] hover:shadow-[0px_0px_20px_8px_rgba(0,0,0,0.4)] duration-300 bg-white hover:shadow-[#dccff3] mx-6 my-4 flex flex-col gap-4">
-                        <div class="flex justify-center text-center"><img src="./Images/Group 26 (3).png"
-                                alt="register">
-                        </div>
-                        <h4 class="font-bold text-2xl text-center mt-2" style="font-family: 'Sora', sans-serif;">Waya
-                            MCX</h4>
-                        <p class=" text-justify text-[18px] tracking-tighter">Gold , Oil , Silver and Other Commodities
-                        </p>
-                        <ul class="text-left list-disc mx-5 text-[18px]">
-                            <li class="list-disc">Intraday and BTST Recommendations</li>
-                            <li>Options and Futures</li>
-                        </ul>
-                        <div class="mt-2 text-center">
-                            <button class="  px-8 py-2 rounded-3xl underline cursor-pointer text-[18px]">
-                                Know More</button>
-                        </div>
-                    </div>
-                    <div
-                        class="rounded-xl p-5 md:p-10 shadow-[0px_22px_33px_#00000012] hover:shadow-[0px_0px_20px_8px_rgba(0,0,0,0.4)] bg-white hover:shadow-[#dccff3] duration-300 mx-6 my-4 flex flex-col gap-4">
-                        <div class="flex justify-center text-center"><img src="./Images/Group 27.png" alt="register">
-                        </div>
-                        <h4 class="font-bold text-2xl text-center mt-2" style="font-family: 'Sora', sans-serif;">Waya
-                            PMS</h4>
-                        <p class=" text-justify text-[18px] tracking-tighter">Ranked : 3 according to PMS bazaar</p>
-                        <ul class="text-left list-disc mx-5 text-[18px]">
-                            <li class="list-disc">Aspiration for 1000% in 7 years</li>
-                            <li>Category : Small Cap</li>
-
-                        </ul>
-                        <div class="mt-2 text-center">
-                            <button class="  px-8 py-2 rounded-3xl underline cursor-pointer text-[18px]">
-                                Know More</button>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- products ends here -->
+            <!-- products ends here -->
 
-        <!-- The Founder starts here -->
+            <!-- The Founder starts here -->
 
-        <div>
-            <div class=" pt-10 flex flex-col gap-10">
-                <h2 class="text-3xl font-semibold text-center text-white" style="font-family: 'Sora', sans-serif;">Word
-                    From The Founder</h2>
-                <div class="flex justify-center ">
-                    <iframe src="./Images/pms_desktop.mp4" class="w-[1280px] h-[320px] md:h-[720px] rounded-lg"
-                        frameborder="0">
-                    </iframe>
-                </div>
-            </div>
             <div>
-                <div class=" flex flex-col gap-10 bg-no-repeat bg-center bg-cover "
-                    style="background-image: url('./Images/Frame 3.svg');">
-                    <div class="max-w-screen-xl mx-auto  rounded-t-[80px] bg-[#1C1C1E]  mt-20 pt-14"
-                        style="font-family: 'Inter', sans-serif;">
-                        <h2 class="text-[32px] font-semibold text-center text-white"
-                            style="font-family: 'Sora', sans-serif;">Why Choose Waya Financial
-                            Technologies?</h2>
-                        <p class="text-[#AAAAAA] text-center md:mx-[30%] text-[24px]">Experience the different with our
-                            professional, compliant, and results-driven approach</p>
-                        <div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-center gap-4 py-16  ">
-                            <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
-                                <div><img src="./Images/Group 40.png" alt="user"></div>
-                                <h4 class="text-white font-semibold mt-2 text-[20px]"
-                                    style="font-family: 'Sora', sans-serif;">SEBI Registered</h4>
-                                <p class="text-white">Fully compliant and registered research analyst ensuring
-                                    regulatory adherence and professional standards</p>
-                            </div>
-                            <div class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
-                                <div><img src="./Images/Group 38.png" alt="user"></div>
-                                <h4 class="text-white font-semibold mt-2 text-[20px]"
-                                    style="font-family: 'Sora', sans-serif;">Expert Research</h4>
-                                <p class="text-white">Deep market analysis and research-backed recommendations
-                                    across
-                                    equity, derivatives, and commodities</p>
-                            </div>
-                            <div class="flex flex-col  p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
-                                <div><img src="./Images/Group 39.png" alt="user"></div>
-                                <h4 class="text-white font-semibold mt-2 text-[20px]"
-                                    style="font-family: 'Sora', sans-serif;">Proven Track Record</h4>
-                                <p class="text-white">2 + years of consistent service delivery with a focus on
-                                    maximizing client investment returns</p>
+                <div class=" pt-10 flex flex-col gap-10">
+                    <h2 class="text-3xl font-semibold text-center text-white" style="font-family: 'Sora', sans-serif;">
+                        Word
+                        From The Founder</h2>
+                    <div class="flex justify-center ">
+                        <iframe src="./Images/pms_desktop.mp4" class="w-[1280px] h-[320px] md:h-[720px] rounded-lg"
+                            frameborder="0">
+                        </iframe>
+                    </div>
+                </div>
+                <div>
+                    <div class=" flex flex-col gap-10 bg-no-repeat bg-center bg-cover "
+                        style="background-image: url('./Images/Frame 3.svg');">
+                        <div class="max-w-screen-xl mx-auto  rounded-t-[80px] bg-[#1C1C1E]  mt-20 pt-14"
+                            style="font-family: 'Inter', sans-serif;">
+                            <h2 class="text-[32px] font-semibold text-center text-white"
+                                style="font-family: 'Sora', sans-serif;">Why Choose Waya Financial
+                                Technologies?</h2>
+                            <p class="text-[#AAAAAA] text-center md:mx-[30%] text-[24px]">Experience the different with
+                                our
+                                professional, compliant, and results-driven approach</p>
+                            <div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-center gap-4 py-16  ">
+                                <div
+                                    class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                                    <div><img src="./Images/Group 40.png" alt="user"></div>
+                                    <h4 class="text-white font-semibold mt-2 text-[20px]"
+                                        style="font-family: 'Sora', sans-serif;">SEBI Registered</h4>
+                                    <p class="text-white">Fully compliant and registered research analyst ensuring
+                                        regulatory adherence and professional standards</p>
+                                </div>
+                                <div
+                                    class="flex flex-col justify-center p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                                    <div><img src="./Images/Group 38.png" alt="user"></div>
+                                    <h4 class="text-white font-semibold mt-2 text-[20px]"
+                                        style="font-family: 'Sora', sans-serif;">Expert Research</h4>
+                                    <p class="text-white">Deep market analysis and research-backed recommendations
+                                        across
+                                        equity, derivatives, and commodities</p>
+                                </div>
+                                <div class="flex flex-col  p-8 items-center rounded-xl bg-[#1C1C1E] h-full">
+                                    <div><img src="./Images/Group 39.png" alt="user"></div>
+                                    <h4 class="text-white font-semibold mt-2 text-[20px]"
+                                        style="font-family: 'Sora', sans-serif;">Proven Track Record</h4>
+                                    <p class="text-white">2 + years of consistent service delivery with a focus on
+                                        maximizing client investment returns</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- The Founder ends here -->
+            <!-- The Founder ends here -->
 
-        <!-- Get in touch starts here -->
-        <div class="bg-white">
-            <div class=" max-w-screen-xl mx-auto grid grid-cols-1 text-center py-16">
+            <!-- Get in touch starts here -->
+            <div class="bg-white">
+                <div class=" max-w-screen-xl mx-auto grid grid-cols-1 text-center py-16">
 
-                <div
-                    class="rounded-[22px] p-[3px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A] mx-[5%] md:mx-[30%]">
-                    <div class="flex flex-col justify-center px-8 py-[18px] items-center rounded-[20px] bg-[white] h-full "
-                        style="font-family: 'Inter', sans-serif;">
-                        <h3 class="font-semibold text-3xl pb-8" style="font-family: 'Sora', sans-serif;">Get In Touch
-                        </h3>
-                        <form class="w-full flex flex-col gap-4  text-[18px]">
-                            <input type="text" placeholder="Name" required
-                                class="border-b-[1px] border-[#1C1C1E] text-[18px] py-[5px] px-[8px] w-full focus:outline-none placeholder-[#1C1C1E] text-[#1C1C1E]" />
-                            <div class="flex items-center border-b border-[#1C1C1E] w-full py-[5px] px-[2px] mb-4">
-                                <!-- Country Code Dropdown -->
-                                <div class="relative w-[112px] mr-2">
-                                    <select
-                                        class="appearance-none w-full text-[18px] text-[#1C1C1E] placeholder-[#1C1C1E] bg-transparent focus:outline-none pr-6" required>
-                                        <option value="+1">+1 (USA)</option>
-                                        <option value="+44">+44 (UK)</option>
-                                        <option value="+91" selected>+91 (India)</option>
-                                        <option value="+61">+61 (Australia)</option>
-                                        <option value="+81">+81 (Japan)</option>
-                                        <option value="+49">+49 (Germany)</option>
-                                        <option value="+33">+33 (France)</option>
-                                        <option value="+86">+86 (China)</option>
-                                        <option value="+39">+39 (Italy)</option>
-                                        <option value="+7">+7 (Russia)</option>
-                                        <option value="+55">+55 (Brazil)</option>
-                                        <option value="+27">+27 (South Africa)</option>
-                                        <option value="+34">+34 (Spain)</option>
-                                        <option value="+90">+90 (Turkey)</option>
-                                    </select>
-                                    <!-- Custom arrow -->
-                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                                        <svg class="w-4 h-4 text-[#1C1C1E]" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M19 9l-7 7-7-7" />
-                                        </svg>
+                    <div
+                        class="rounded-[22px] p-[3px] bg-gradient-to-b from-[#77F0E4] via-[#C578E3] to-[#ECAF6A] mx-[5%] md:mx-[30%]">
+                        <div class="flex flex-col justify-center px-8 py-[18px] items-center rounded-[20px] bg-[white] h-full "
+                            style="font-family: 'Inter', sans-serif;">
+                            <h3 class="font-semibold text-3xl pb-8" style="font-family: 'Sora', sans-serif;">Get In
+                                Touch
+                            </h3>
+                            <form class="w-full flex flex-col gap-4  text-[18px]">
+                                <input type="text" placeholder="Name" required
+                                    class="border-b-[1px] border-[#1C1C1E] text-[18px] py-[5px] px-[8px] w-full focus:outline-none placeholder-[#1C1C1E] text-[#1C1C1E]" />
+                                <div class="flex items-center border-b border-[#1C1C1E] w-full py-[5px] px-[2px] mb-4">
+                                    <!-- Country Code Dropdown -->
+                                    <div class="relative w-[112px] mr-2">
+                                        <select
+                                            class="appearance-none w-full text-[18px] text-[#1C1C1E] placeholder-[#1C1C1E] bg-transparent focus:outline-none pr-6"
+                                            required>
+                                            <option value="+1">+1 (USA)</option>
+                                            <option value="+44">+44 (UK)</option>
+                                            <option value="+91" selected>+91 (India)</option>
+                                            <option value="+61">+61 (Australia)</option>
+                                            <option value="+81">+81 (Japan)</option>
+                                            <option value="+49">+49 (Germany)</option>
+                                            <option value="+33">+33 (France)</option>
+                                            <option value="+86">+86 (China)</option>
+                                            <option value="+39">+39 (Italy)</option>
+                                            <option value="+7">+7 (Russia)</option>
+                                            <option value="+55">+55 (Brazil)</option>
+                                            <option value="+27">+27 (South Africa)</option>
+                                            <option value="+34">+34 (Spain)</option>
+                                            <option value="+90">+90 (Turkey)</option>
+                                        </select>
+                                        <!-- Custom arrow -->
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                                            <svg class="w-4 h-4 text-[#1C1C1E]" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </div>
                                     </div>
+
+                                    <!-- Mobile Number Input -->
+                                    <input type="number" placeholder="Mobile Number" required
+                                        class="flex-1 text-[18px] text-[#1C1C1E] placeholder-[#1C1C1E] focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                        oninput="this.value = this.value.slice(0, 10)" />
                                 </div>
 
-                                <!-- Mobile Number Input -->
-                                <input type="number" placeholder="Mobile Number" required
-                                    class="flex-1 text-[18px] text-[#1C1C1E] placeholder-[#1C1C1E] focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                                    oninput="this.value = this.value.slice(0, 10)" />
-                            </div>
-
-                            <select
-                                class="border-b border-[#1C1C1E] text-[18px] py-[5px] px-[8px] w-full focus:outline-none text-[#1C1C1E] mb-4 bg-transparent" required>
-                                <option value="" disabled selected hidden>Product Type</option>
-                                <option value="electronics">Waya Equity</option>
-                                <option value="fashion">Waya FnO</option>
-                                <option value="furniture">Waya MCX</option>
-                                <option value="toys">Waya PMS</option>
-                            </select>
-                            <textarea placeholder="Message" rows="2"
-                                class="border-[1px] border-[#1C1C1E] text-[18px] py-[5px] px-[8px] w-full focus:outline-none placeholder-[#1C1C1E] text-[#1C1C1E]"></textarea>
-                            <div class="flex justify-center">
-                                <button type="submit"
-                                    class="bg-black text-[18px] text-center text-white font-semibold rounded-full py-3 px-14 mt-6 hover:opacity-90 transition">
-                                    Send Request
-                                </button>
-                            </div>
-                            <div class="flex items-center justify-center my-1 text-gray-600">
-                                <div class="flex-1 h-px bg-[#1C1C1E]"></div>
-                                <span class="px-3 text-[#1C1C1E] text-[18px]">Or</span>
-                                <div class="flex-1 h-px bg-[#1C1C1E]"></div>
-                            </div>
-                            <p class="text-center text-[#1C1C1E] text-[18px]">Support@thewaya.com</p>
-                        </form>
+                                <select
+                                    class="border-b border-[#1C1C1E] text-[18px] py-[5px] px-[8px] w-full focus:outline-none text-[#1C1C1E] mb-4 bg-transparent"
+                                    required>
+                                    <option value="" disabled selected hidden>Product Type</option>
+                                    <option value="electronics">Waya Equity</option>
+                                    <option value="fashion">Waya FnO</option>
+                                    <option value="furniture">Waya MCX</option>
+                                    <option value="toys">Waya PMS</option>
+                                </select>
+                                <textarea placeholder="Message" rows="2"
+                                    class="border-[1px] border-[#1C1C1E] text-[18px] py-[5px] px-[8px] w-full focus:outline-none placeholder-[#1C1C1E] text-[#1C1C1E]"></textarea>
+                                <div class="flex justify-center">
+                                    <button type="submit"
+                                        class="bg-black text-[18px] text-center text-white font-semibold rounded-full py-3 px-14 mt-6 hover:opacity-90 transition">
+                                        Send Request
+                                    </button>
+                                </div>
+                                <div class="flex items-center justify-center my-1 text-gray-600">
+                                    <div class="flex-1 h-px bg-[#1C1C1E]"></div>
+                                    <span class="px-3 text-[#1C1C1E] text-[18px]">Or</span>
+                                    <div class="flex-1 h-px bg-[#1C1C1E]"></div>
+                                </div>
+                                <p class="text-center text-[#1C1C1E] text-[18px]">Support@thewaya.com</p>
+                            </form>
 
 
+                        </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Get in touch ends here -->
+
+            <!-- Footer Starts here -->
+
+            <div>
+                <div
+                    class="max-w-screen-xl  mx-auto flex pt-12 w-[100%] flex-col md:flex-row  justify-center items-center md:items-start">
+                    <div class="flex flex-col gap-2 justify-center items-center md:items-start md:w-[60%]"
+                        style="font-family: 'Inter', sans-serif;">
+                        <div class="flex w-20 h-20">
+                            <img src="./Images/logo.png" alt="logo">
+                        </div>
+                        <p class="text-[#AAAAAA] mx-[5%] md:mx-0 text-center md:text-left md:w-[60%]"
+                            style="font-family: 'Sora', sans-serif;">Lorem Ipsum is simply
+                            dummy text of
+                            the
+                            printing and typesetting
+                            industry.</p><br><br>
+                        <p class="text-[#AAAAAA]">Download the app :</p>
+                        <div class="flex gap-4">
+                            <div class="w-32 h-16"><img src="./Images/googleplay.png" alt="googleplay"></div>
+                            <div class="w-32 h-16"><img src="./Images/appstore.png" alt="appstore"></div>
+                        </div>
+                    </div>
+                    <div class=" md:w-[40%] flex flex-col gap-[75px]">
+                        <div class="flex justify-center md:justify-start gap-24 ">
+
+                            <ul class="text-[#AAAAAA] flex flex-col gap-2" style="font-family: 'Inter', sans-serif;">
+                                <p class="text-white font-semibold text-[20px] pb-2">Quick Links</p>
+                                <a href="./aboutus.html">
+                                    <li>About Us</li>
+                                </a>
+                                <a href="./index.html">
+                                    <li>Products</li>
+                                </a>
+                                <a href="./blog.html">
+                                    <li>Blogs</li>
+                                </a>
+                                <a href="./community.html">
+                                    <li>Community</li>
+                                </a>
+                            </ul>
+                            <ul class="text-[#AAAAAA] flex flex-col gap-2" style="font-family: 'Inter', sans-serif;">
+                                <p class="text-white font-semibold text-[20px] pb-2">Follow Us :</p>
+                                <a href="https://www.instagram.com/wayaindia/?igsh=dGF2em1mMzRha3Bk#" target="_blank">
+                                    <li class="flex gap-1"><img src="./Images/mdi_instagram.png" alt="">Instagram</li>
+                                </a>
+                                <a href="https://www.linkedin.com/company/waya-financial-technologies/?originalSubdomain=in"
+                                    target="_blank">
+                                    <li class="flex gap-1"><img src="./Images/akar-icons_linkedin-fill.png"
+                                            alt="">Linkedin
+                                    </li>
+                                </a>
+                                <a href="https://x.com/WayaIndia" target="_blank">
+                                    <li class="flex gap-1"><img src="./Images/prime_twitter.png" alt="">Twitter</li>
+                                </a>
+                            </ul>
+                        </div>
+                        <p class="text-[#AAAAAA] pb-2 md:pb-0 md:mx-0 mx-[9%]"
+                            style="font-family: 'Inter', sans-serif;">
+                            SEBI Registered
+                            Research Analyst - INH000010876</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer ends here -->
+
+            <!-- Copyright start here -->
+
+            <div class="bg-black py-4">
+                <div
+                    class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-start gap-3 md:gap-0 md:justify-between ">
+                    <p class="text-[#AAAAAA]" style="font-family: 'Sora', sans-serif;">2022 Waya Financial Technologies
+                        Pvt
+                        Ltd</p>
+                    <ul class="text-[#AAAAAA] flex gap-8" style="font-family: 'Inter', sans-serif;">
+                        <a href="https://thewaya.com/tnc" target="_blank">
+                            <li>Terms & Conditions</li>
+                        </a>
+                        <a href="https://thewaya.com/privacypolicy" target="_blank">
+                            <li>Privacy Policy</li>
+                        </a>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Get in touch ends here -->
+        <script>
 
-        <!-- Footer Starts here -->
+            const menuBtn = document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
 
-        <div>
-            <div
-                class="max-w-screen-xl  mx-auto flex pt-12 w-[100%] flex-col md:flex-row  justify-center items-center md:items-start">
-                <div class="flex flex-col gap-2 justify-center items-center md:items-start md:w-[60%]"
-                    style="font-family: 'Inter', sans-serif;">
-                    <div class="flex w-20 h-20">
-                        <img src="./Images/logo.png" alt="logo">
-                    </div>
-                    <p class="text-[#AAAAAA] mx-[5%] md:mx-0 text-center md:text-left md:w-[60%]"
-                        style="font-family: 'Sora', sans-serif;">Lorem Ipsum is simply
-                        dummy text of
-                        the
-                        printing and typesetting
-                        industry.</p><br><br>
-                    <p class="text-[#AAAAAA]">Download the app :</p>
-                    <div class="flex gap-4">
-                        <div class="w-32 h-16"><img src="./Images/googleplay.png" alt="googleplay"></div>
-                        <div class="w-32 h-16"><img src="./Images/appstore.png" alt="appstore"></div>
-                    </div>
-                </div>
-                <div class=" md:w-[40%] flex flex-col gap-[75px]">
-                    <div class="flex justify-center md:justify-start gap-24 ">
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
 
-                        <ul class="text-[#AAAAAA] flex flex-col gap-2" style="font-family: 'Inter', sans-serif;">
-                            <p class="text-white font-semibold text-[20px] pb-2">Quick Links</p>
-                            <a href="./aboutus.html">
-                                <li>About Us</li>
-                            </a>
-                            <a href="./index.html">
-                                <li>Products</li>
-                            </a>
-                            <a href="./blog.html">
-                                <li>Blogs</li>
-                            </a>
-                            <a href="./community.html">
-                                <li>Community</li>
-                            </a>
-                        </ul>
-                        <ul class="text-[#AAAAAA] flex flex-col gap-2" style="font-family: 'Inter', sans-serif;">
-                            <p class="text-white font-semibold text-[20px] pb-2">Follow Us :</p>
-                            <a href="https://www.instagram.com/wayaindia/?igsh=dGF2em1mMzRha3Bk#" target="_blank">
-                                <li class="flex gap-1"><img src="./Images/mdi_instagram.png" alt="">Instagram</li>
-                            </a>
-                            <a href="https://www.linkedin.com/company/waya-financial-technologies/?originalSubdomain=in" target="_blank">
-                                <li class="flex gap-1"><img src="./Images/akar-icons_linkedin-fill.png" alt="">Linkedin
-                                </li>
-                            </a>
-                            <a href="https://x.com/WayaIndia"
-                                target="_blank">
-                                <li class="flex gap-1"><img src="./Images/prime_twitter.png" alt="">Twitter</li>
-                            </a>
-                        </ul>
-                    </div>
-                    <p class="text-[#AAAAAA] pb-2 md:pb-0 md:mx-0 mx-[9%]" style="font-family: 'Inter', sans-serif;">
-                        SEBI Registered
-                        Research Analyst - INH000010876</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer ends here -->
-
-        <!-- Copyright start here -->
-
-        <div class="bg-black py-4">
-            <div
-                class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-start gap-3 md:gap-0 md:justify-between ">
-                <p class="text-[#AAAAAA]" style="font-family: 'Sora', sans-serif;">2022 Waya Financial Technologies
-                    Pvt
-                    Ltd</p>
-                <ul class="text-[#AAAAAA] flex gap-8" style="font-family: 'Inter', sans-serif;">
-                    <a href="https://thewaya.com/tnc" target="_blank">
-                        <li>Terms & Conditions</li>
-                    </a>
-                    <a href="https://thewaya.com/privacypolicy" target="_blank">
-                        <li>Privacy Policy</li>
-                    </a>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        const menuBtn = document.getElementById("mobile-menu-button");
-        const mobileMenu = document.getElementById("mobile-menu");
-
-        menuBtn.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-
-            // toggle icon ☰ <-> ✖
-            if (mobileMenu.classList.contains("hidden")) {
-                menuBtn.textContent = "☰";
-            } else {
-                menuBtn.textContent = "✖";
-            }
-        });
-    </script>
+                // toggle icon ☰ <-> ✖
+                if (mobileMenu.classList.contains("hidden")) {
+                    menuBtn.textContent = "☰";
+                } else {
+                    menuBtn.textContent = "✖";
+                }
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </body>
 
 </html>
