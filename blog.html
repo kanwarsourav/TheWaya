@@ -17,10 +17,9 @@
 <body>
 
     <div class="bg-[#1C1C1E]">
-        <!-- nabvar starts here -->
-
-        <div class="bg-[#1C1C1E] sticky top-0">
-            <div class="max-w-screen-xl md:mx-auto flex justify-between items-center py-4 mx-[5%]"
+        <!-- Navbar starts here -->
+        <div class="bg-[#1C1C1E] sticky top-0 z-50">
+            <div class="max-w-screen-xl mx-[5%] md:mx-auto flex justify-between items-center py-4"
                 style="font-family: 'Inter', sans-serif;">
 
                 <!-- Logo -->
@@ -34,14 +33,10 @@
                 <div class="hidden lg:flex gap-14 items-center">
                     <ul class="flex gap-16 text-white text-[18px]">
                         <li><a href="./aboutus.html" class="hover:text-gray-400 transition">About Us</a></li>
-                        <li x-data="{ open: false, isDesktop: window.innerWidth >= 768 }"
-                            x-init="window.addEventListener('resize', () => { isDesktop = window.innerWidth >= 768 })"
-                            class="relative" @click.away="open = false">
 
-                            <!-- Products Link -->
-                            <a href="" @click.prevent="open = !open"
-                                @mouseenter="if (isDesktop && !open) open = true"
-                                @mouseleave="if (isDesktop && !clicked) open = false"
+                        <!-- Products Dropdown -->
+                        <li x-data="{ open: false }" class="relative" @mouseleave="open = false">
+                            <a href="#" @click.prevent="open = !open" @mouseenter="open = true"
                                 class="hover:text-gray-400 transition inline-flex items-center font-medium">
                                 Products
                             </a>
@@ -49,29 +44,21 @@
                             <!-- Dropdown Menu -->
                             <div x-show="open" x-transition
                                 class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 flex bg-gray-100 shadow-lg rounded-md z-50 divide-x divide-gray-300">
-
-                                <!-- Card 1 -->
                                 <a href="./waya-equity.html"
                                     class="flex flex-col px-6 py-4 text-[#1C1C1E] hover:bg-gray-200 min-w-[160px]">
                                     <span class="font-semibold">Waya Equity</span>
                                     <p class="text-sm text-gray-600">For Investors</p>
                                 </a>
-
-                                <!-- Card 2 -->
                                 <a href="./waya-fno.html"
                                     class="flex flex-col px-6 py-4 text-[#1C1C1E] hover:bg-gray-200 min-w-[160px]">
                                     <span class="font-semibold">Waya FnO</span>
                                     <p class="text-sm text-gray-600">For Risk Takers</p>
                                 </a>
-
-                                <!-- Card 3 -->
                                 <a href="#product3"
                                     class="flex flex-col px-6 py-4 text-[#1C1C1E] hover:bg-gray-200 min-w-[160px]">
                                     <span class="font-semibold">Waya MCX</span>
                                     <p class="text-sm text-gray-600">Commodity Market</p>
                                 </a>
-
-                                <!-- Card 4 -->
                                 <a href="#product4"
                                     class="flex flex-col px-6 py-4 text-[#1C1C1E] hover:bg-gray-200 min-w-[160px]">
                                     <span class="font-semibold">Waya PMS</span>
@@ -80,15 +67,15 @@
                             </div>
                         </li>
 
-
-
                         <li><a href="./blog.html" class="hover:text-gray-400 transition">Blogs</a></li>
                         <li><a href="./community.html" class="hover:text-gray-400 transition">Community</a></li>
                     </ul>
+
                     <div>
                         <a href="contactus.html"
                             class="mt-2 w-3/4 mx-auto border-white border-[2px] px-8 py-3 rounded-3xl text-white hover:bg-white hover:text-black transition cursor-pointer">
-                            Contact Us</a>
+                            Contact Us
+                        </a>
                     </div>
                 </div>
 
@@ -101,9 +88,8 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden lg:hidden w-full absolute left-0 right-0 bg-[#2C2C2E] shadow-lg z-10"
+            <div id="mobile-menu" class="hidden lg:hidden w-full absolute top-full left-0 bg-[#2C2C2E] shadow-lg z-40"
                 x-data="{ productsOpen: false }">
-
                 <ul class="flex flex-col text-white text-center py-4 space-y-3"
                     style="font-family: 'Inter', sans-serif;">
                     <li><a href="./aboutus.html" class="block py-2 hover:bg-[#3C3C3E] transition">About Us</a></li>
@@ -115,7 +101,6 @@
                             Products
                         </button>
 
-                        <!-- Dropdown Items -->
                         <div x-show="productsOpen" x-transition
                             class="flex flex-col bg-[#3C3C3E] mt-1 rounded-md overflow-hidden">
                             <a href="./waya-equity.html" class="block px-6 py-2 hover:bg-[#4C4C4E]">Waya Equity</a>
@@ -137,8 +122,9 @@
                     </li>
                 </ul>
             </div>
+        </div>
 
-            <!-- nabvar ends here -->
+        <!-- nabvar ends here -->
         <!-- blogs starts here -->
         <div>
             <div class="max-w-screen-xl  md:mx-auto   py-10 flex flex-col gap-12  ">
@@ -161,7 +147,8 @@
                                 <h4 class="font-semibold text-white text-2xl text-center mt-2"
                                     style="font-family: 'Sora', sans-serif;">
                                     Post 1 Headline</h4>
-                                <p class=" font-normal text-center text-[18px] text-white ">Sample small text. Lorem ipsum dolor
+                                <p class=" font-normal text-center text-[18px] text-white ">Sample small text. Lorem
+                                    ipsum dolor
                                     sit amet</p>
                                 <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-10">Friday 3-10-2025
                                 </p>
@@ -173,100 +160,105 @@
                         </div>
                     </div>
                     <div
-                            class="relative rounded-[22px] p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
-                            <div class="rounded-[20px] flex flex-col gap-3 p-4  bg-[#1C1C1E]">
-                                <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
-                                        alt="register">
-                                </div>
-                                <h4 class="font-semibold text-white text-2xl text-center mt-2"
-                                    style="font-family: 'Sora', sans-serif;">
-                                    Post 2 Headline</h4>
-                                <p class=" font-normal text-center text-[18px] text-white ">Sample small text. Lorem ipsum dolor
-                                    sit amet</p>
-                                <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-10">Friday 3-10-2025
-                                </p>
-                                <a href="#"
-                                    class="absolute left-1/2 -bottom-6 transform -translate-x-1/2 bg-[#1C1C1E] border-2 border-[#C578E3] rounded-full px-9 md:px-12 py-3 text-white hover:bg-[#C578E3] transition">
-                                    Read More
-                                </a>
+                        class="relative rounded-[22px] p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
+                        <div class="rounded-[20px] flex flex-col gap-3 p-4  bg-[#1C1C1E]">
+                            <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
+                                    alt="register">
                             </div>
+                            <h4 class="font-semibold text-white text-2xl text-center mt-2"
+                                style="font-family: 'Sora', sans-serif;">
+                                Post 2 Headline</h4>
+                            <p class=" font-normal text-center text-[18px] text-white ">Sample small text. Lorem ipsum
+                                dolor
+                                sit amet</p>
+                            <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-10">Friday 3-10-2025
+                            </p>
+                            <a href="#"
+                                class="absolute left-1/2 -bottom-6 transform -translate-x-1/2 bg-[#1C1C1E] border-2 border-[#C578E3] rounded-full px-9 md:px-12 py-3 text-white hover:bg-[#C578E3] transition">
+                                Read More
+                            </a>
                         </div>
+                    </div>
                     <div
-                            class="relative rounded-[22px] p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
-                            <div class="rounded-[20px] flex flex-col gap-3 p-4  bg-[#1C1C1E]">
-                                <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
-                                        alt="register">
-                                </div>
-                                <h4 class="font-semibold text-white text-2xl text-center mt-2"
-                                    style="font-family: 'Sora', sans-serif;">
-                                    Post 3 Headline</h4>
-                                <p class=" font-normal text-center text-[18px] text-white ">Sample small text. Lorem ipsum dolor
-                                    sit amet</p>
-                                <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-10">Friday 3-10-2025
-                                </p>
-                                <a href="#"
-                                    class="absolute left-1/2 -bottom-6 transform -translate-x-1/2 bg-[#1C1C1E] border-2 border-[#C578E3] rounded-full px-9 md:px-12 py-3 text-white hover:bg-[#C578E3] transition">
-                                    Read More
-                                </a>
+                        class="relative rounded-[22px] p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
+                        <div class="rounded-[20px] flex flex-col gap-3 p-4  bg-[#1C1C1E]">
+                            <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
+                                    alt="register">
                             </div>
+                            <h4 class="font-semibold text-white text-2xl text-center mt-2"
+                                style="font-family: 'Sora', sans-serif;">
+                                Post 3 Headline</h4>
+                            <p class=" font-normal text-center text-[18px] text-white ">Sample small text. Lorem ipsum
+                                dolor
+                                sit amet</p>
+                            <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-10">Friday 3-10-2025
+                            </p>
+                            <a href="#"
+                                class="absolute left-1/2 -bottom-6 transform -translate-x-1/2 bg-[#1C1C1E] border-2 border-[#C578E3] rounded-full px-9 md:px-12 py-3 text-white hover:bg-[#C578E3] transition">
+                                Read More
+                            </a>
                         </div>
+                    </div>
                     <div
-                            class="relative rounded-[22px] p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
-                            <div class="rounded-[20px] flex flex-col gap-3 p-4  bg-[#1C1C1E]">
-                                <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
-                                        alt="register">
-                                </div>
-                                <h4 class="font-semibold text-white text-2xl text-center mt-2"
-                                    style="font-family: 'Sora', sans-serif;">
-                                    Post 1 Headline</h4>
-                                <p class=" font-normal text-center text-[18px] text-white ">Sample small text. Lorem ipsum dolor
-                                    sit amet</p>
-                                <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-10">Friday 3-10-2025
-                                </p>
-                                <a href="#"
-                                    class="absolute left-1/2 -bottom-6 transform -translate-x-1/2 bg-[#1C1C1E] border-2 border-[#C578E3] rounded-full px-9 md:px-12 py-3 text-white hover:bg-[#C578E3] transition">
-                                    Read More
-                                </a>
+                        class="relative rounded-[22px] p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
+                        <div class="rounded-[20px] flex flex-col gap-3 p-4  bg-[#1C1C1E]">
+                            <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
+                                    alt="register">
                             </div>
+                            <h4 class="font-semibold text-white text-2xl text-center mt-2"
+                                style="font-family: 'Sora', sans-serif;">
+                                Post 1 Headline</h4>
+                            <p class=" font-normal text-center text-[18px] text-white ">Sample small text. Lorem ipsum
+                                dolor
+                                sit amet</p>
+                            <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-10">Friday 3-10-2025
+                            </p>
+                            <a href="#"
+                                class="absolute left-1/2 -bottom-6 transform -translate-x-1/2 bg-[#1C1C1E] border-2 border-[#C578E3] rounded-full px-9 md:px-12 py-3 text-white hover:bg-[#C578E3] transition">
+                                Read More
+                            </a>
                         </div>
+                    </div>
                     <div
-                            class="relative rounded-[22px] p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
-                            <div class="rounded-[20px] flex flex-col gap-3 p-4  bg-[#1C1C1E]">
-                                <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
-                                        alt="register">
-                                </div>
-                                <h4 class="font-semibold text-white text-2xl text-center mt-2"
-                                    style="font-family: 'Sora', sans-serif;">
-                                    Post 2 Headline</h4>
-                                <p class=" font-normal text-center text-[18px] text-white ">Sample small text. Lorem ipsum dolor
-                                    sit amet</p>
-                                <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-10">Friday 3-10-2025
-                                </p>
-                                <a href="#"
-                                    class="absolute left-1/2 -bottom-6 transform -translate-x-1/2 bg-[#1C1C1E] border-2 border-[#C578E3] rounded-full px-9 md:px-12 py-3 text-white hover:bg-[#C578E3] transition">
-                                    Read More
-                                </a>
+                        class="relative rounded-[22px] p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
+                        <div class="rounded-[20px] flex flex-col gap-3 p-4  bg-[#1C1C1E]">
+                            <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
+                                    alt="register">
                             </div>
+                            <h4 class="font-semibold text-white text-2xl text-center mt-2"
+                                style="font-family: 'Sora', sans-serif;">
+                                Post 2 Headline</h4>
+                            <p class=" font-normal text-center text-[18px] text-white ">Sample small text. Lorem ipsum
+                                dolor
+                                sit amet</p>
+                            <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-10">Friday 3-10-2025
+                            </p>
+                            <a href="#"
+                                class="absolute left-1/2 -bottom-6 transform -translate-x-1/2 bg-[#1C1C1E] border-2 border-[#C578E3] rounded-full px-9 md:px-12 py-3 text-white hover:bg-[#C578E3] transition">
+                                Read More
+                            </a>
                         </div>
+                    </div>
                     <div
-                            class="relative rounded-[22px] p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
-                            <div class="rounded-[20px] flex flex-col gap-3 p-4  bg-[#1C1C1E]">
-                                <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
-                                        alt="register">
-                                </div>
-                                <h4 class="font-semibold text-white text-2xl text-center mt-2"
-                                    style="font-family: 'Sora', sans-serif;">
-                                    Post 3 Headline</h4>
-                                <p class=" font-normal text-center text-[18px] text-white ">Sample small text. Lorem ipsum dolor
-                                    sit amet</p>
-                                <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-10">Friday 3-10-2025
-                                </p>
-                                <a href="#"
-                                    class="absolute left-1/2 -bottom-6 transform -translate-x-1/2 bg-[#1C1C1E] border-2 border-[#C578E3] rounded-full px-9 md:px-12 py-3 text-white hover:bg-[#C578E3] transition">
-                                    Read More
-                                </a>
+                        class="relative rounded-[22px] p-[3px]  bg-gradient-to-b from-[#77F0E4] to-[#C578E3]     mx-6 my-4 flex flex-col gap-4 ">
+                        <div class="rounded-[20px] flex flex-col gap-3 p-4  bg-[#1C1C1E]">
+                            <div class="flex justify-center text-center"><img src="./Images/Group 94.png"
+                                    alt="register">
                             </div>
+                            <h4 class="font-semibold text-white text-2xl text-center mt-2"
+                                style="font-family: 'Sora', sans-serif;">
+                                Post 3 Headline</h4>
+                            <p class=" font-normal text-center text-[18px] text-white ">Sample small text. Lorem ipsum
+                                dolor
+                                sit amet</p>
+                            <p class="text-[#ECAF6A] font-semibold text-[18px] text-center pb-10">Friday 3-10-2025
+                            </p>
+                            <a href="#"
+                                class="absolute left-1/2 -bottom-6 transform -translate-x-1/2 bg-[#1C1C1E] border-2 border-[#C578E3] rounded-full px-9 md:px-12 py-3 text-white hover:bg-[#C578E3] transition">
+                                Read More
+                            </a>
                         </div>
+                    </div>
 
                 </div>
             </div>
@@ -319,12 +311,12 @@
                             <a href="https://www.instagram.com/wayaindia/?igsh=dGF2em1mMzRha3Bk#" target="_blank">
                                 <li class="flex gap-1"><img src="./Images/mdi_instagram.png" alt="">Instagram</li>
                             </a>
-                           <a href="https://www.linkedin.com/company/waya-financial-technologies/?originalSubdomain=in" target="_blank">
+                            <a href="https://www.linkedin.com/company/waya-financial-technologies/?originalSubdomain=in"
+                                target="_blank">
                                 <li class="flex gap-1"><img src="./Images/akar-icons_linkedin-fill.png" alt="">Linkedin
                                 </li>
                             </a>
-                            <a href="https://x.com/WayaIndia"
-                                target="_blank">
+                            <a href="https://x.com/WayaIndia" target="_blank">
                                 <li class="flex gap-1"><img src="./Images/prime_twitter.png" alt="">Twitter</li>
                             </a>
                         </ul>
