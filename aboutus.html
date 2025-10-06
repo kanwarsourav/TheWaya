@@ -39,7 +39,7 @@
                             class="relative" @click.away="open = false">
 
                             <!-- Products Link -->
-                            <a href="#productsfour" @click.prevent="open = !open"
+                            <a href="" @click.prevent="open = !open"
                                 @mouseenter="if (isDesktop && !open) open = true"
                                 @mouseleave="if (isDesktop && !clicked) open = false"
                                 class="hover:text-gray-400 transition inline-flex items-center font-medium">
@@ -51,14 +51,14 @@
                                 class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 flex bg-gray-100 shadow-lg rounded-md z-50 divide-x divide-gray-300">
 
                                 <!-- Card 1 -->
-                                <a href="#product1"
+                                <a href="./waya-equity.html"
                                     class="flex flex-col px-6 py-4 text-[#1C1C1E] hover:bg-gray-200 min-w-[160px]">
                                     <span class="font-semibold">Waya Equity</span>
                                     <p class="text-sm text-gray-600">For Investors</p>
                                 </a>
 
                                 <!-- Card 2 -->
-                                <a href="#product2"
+                                <a href="./waya-fno.html"
                                     class="flex flex-col px-6 py-4 text-[#1C1C1E] hover:bg-gray-200 min-w-[160px]">
                                     <span class="font-semibold">Waya FnO</span>
                                     <p class="text-sm text-gray-600">For Risk Takers</p>
@@ -118,8 +118,8 @@
                         <!-- Dropdown Items -->
                         <div x-show="productsOpen" x-transition
                             class="flex flex-col bg-[#3C3C3E] mt-1 rounded-md overflow-hidden">
-                            <a href="#product1" class="block px-6 py-2 hover:bg-[#4C4C4E]">Waya Equity</a>
-                            <a href="#product2" class="block px-6 py-2 hover:bg-[#4C4C4E]">Waya FnO</a>
+                            <a href="./waya-equity.html" class="block px-6 py-2 hover:bg-[#4C4C4E]">Waya Equity</a>
+                            <a href="./waya-fno.html" class="block px-6 py-2 hover:bg-[#4C4C4E]">Waya FnO</a>
                             <a href="#product3" class="block px-6 py-2 hover:bg-[#4C4C4E]">Waya MCX</a>
                             <a href="#product4" class="block px-6 py-2 hover:bg-[#4C4C4E]">Waya PMS</a>
                         </div>
